@@ -235,59 +235,12 @@
   let activeCategory = 'all';
   let searchQuery = '';
   let openedDays = new Set();
-  let sparklesEnabled = true;
-  let soundEnabled = false;
-
   // Selected state for PDP
   let currentPDP = {
     product: null,
     selectedOption: null,
     quantity: 1
   };
-
-  // Web Audio Context for Pure Festive Chimes
-  let audioCtx = null;
-
-  function initAudio() {
-    if (!audioCtx && typeof window !== 'undefined' && (window.AudioContext || window.webkitAudioContext)) {
-      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-      audioCtx = new AudioContextClass();
-    }
-  }
-
-  function playFestiveChime(type = 'bell') {
-    if (!soundEnabled) return;
-    try {
-      initAudio();
-      if (!audioCtx) return;
-      if (audioCtx.state === 'suspended') {
-        audioCtx.resume();
-      }
-
-      const now = audioCtx.currentTime;
-      const notes = type === 'chord' ? [523.25, 659.25, 783.99, 1046.50] : [783.99, 987.77, 1174.66];
-
-      notes.forEach((freq, idx) => {
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-
-        osc.type = 'triangle';
-        osc.frequency.setValueAtTime(freq, now + idx * 0.08);
-
-        gain.gain.setValueAtTime(0, now + idx * 0.08);
-        gain.gain.linearRampToValueAtTime(0.12, now + idx * 0.08 + 0.02);
-        gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.08 + 0.5);
-
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-
-        osc.start(now + idx * 0.08);
-        osc.stop(now + idx * 0.08 + 0.55);
-      });
-    } catch (e) {
-      console.warn('Erreur audio:', e);
-    }
-  }
 
   function formatFCFA(amount) {
     return new Intl.NumberFormat('fr-FR').format(Math.round(amount)) + ' ' + CONFIG.currency;
@@ -303,12 +256,6 @@
 
       const savedDays = localStorage.getItem('nsp_advent_v5');
       if (savedDays) openedDays = new Set(JSON.parse(savedDays));
-
-      const savedSparkles = localStorage.getItem('nsp_sparkles');
-      if (savedSparkles !== null) sparklesEnabled = savedSparkles === 'true';
-
-      const savedSound = localStorage.getItem('nsp_sound');
-      if (savedSound !== null) soundEnabled = savedSound === 'true';
     } catch (e) {
       console.warn('LocalStorage indisponible:', e);
     }
@@ -1141,76 +1088,7 @@
   }
 
   // =========================================================================
-  // 9. CANVAS PARTICULES POUSSIÈRE D'ÉTOILES TROPICALE
-  // =========================================================================
-
-  function initSparklesCanvas() {
-    const canvas = document.getElementById('festive-canvas');
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    let width = canvas.width = window.innerWidth;
-    let height = canvas.height = window.innerHeight;
-
-    let particles = [];
-    const count = window.innerWidth < 768 ? 25 : 50;
-
-    for (let i = 0; i < count; i++) {
-      particles.push({
-        x: Math.random() * width,
-        y: Math.random() * height,
-        r: Math.random() * 2 + 0.8,
-        speedY: Math.random() * 0.6 + 0.3,
-        speedX: Math.random() * 0.4 - 0.2,
-        alpha: Math.random() * 0.6 + 0.3,
-        fadeSpeed: (Math.random() * 0.01 + 0.005) * (Math.random() > 0.5 ? 1 : -1),
-        color: Math.random() > 0.3 ? '#DDA13B' : '#FFF8F0'
-      });
-    }
-
-    function render() {
-      if (!sparklesEnabled) {
-        ctx.clearRect(0, 0, width, height);
-        return;
-      }
-
-      ctx.clearRect(0, 0, width, height);
-
-      particles.forEach(p => {
-        p.y += p.speedY;
-        p.x += p.speedX;
-        p.alpha += p.fadeSpeed;
-
-        if (p.alpha <= 0.1 || p.alpha >= 0.8) p.fadeSpeed = -p.fadeSpeed;
-        if (p.y > height) { p.y = -10; p.x = Math.random() * width; }
-        if (p.x > width) p.x = 0;
-        if (p.x < 0) p.x = width;
-
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-        ctx.fillStyle = p.color;
-        ctx.globalAlpha = p.alpha;
-        ctx.shadowBlur = 5;
-        ctx.shadowColor = p.color;
-        ctx.fill();
-      });
-
-      ctx.globalAlpha = 1;
-      requestAnimationFrame(render);
-    }
-
-    window.addEventListener('resize', () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    }, { passive: true });
-
-    render();
-  }
-
-  // =========================================================================
-  // 10. NOTIFICATIONS TOAST & SCROLL REVEAL (SVG ONLY)
+  // 9. NOTIFICATIONS TOAST & SCROLL REVEAL (SVG ONLY)
   // =========================================================================
 
   function showToast(message) {
@@ -1221,7 +1099,7 @@
     toast.className = 'toast';
     toast.setAttribute('role', 'status');
     toast.innerHTML = `
-      <svg class="svg-ico svg-ico-sm text-gold" aria-hidden="true"><use href="#icon-sparkle"/></svg>
+      <svg class="svg-ico svg-ico-sm text-gold" aria-hidden="true"><use href="#icon-check"/></svg>
       <span>${message}</span>
     `;
 
@@ -1431,36 +1309,6 @@
       link.addEventListener('click', closeMobileMenu);
     });
 
-    const toggleSparklesBtn = document.getElementById('btn-toggle-sparkles');
-    if (toggleSparklesBtn) {
-      toggleSparklesBtn.addEventListener('click', () => {
-        sparklesEnabled = !sparklesEnabled;
-        localStorage.setItem('nsp_sparkles', String(sparklesEnabled));
-        toggleSparklesBtn.setAttribute('aria-pressed', String(sparklesEnabled));
-        toggleSparklesBtn.style.opacity = sparklesEnabled ? '1' : '0.4';
-        showToast(sparklesEnabled ? 'Poussière d’étoiles activée' : 'Poussière d’étoiles en pause');
-      });
-      toggleSparklesBtn.style.opacity = sparklesEnabled ? '1' : '0.4';
-    }
-
-    const toggleSoundBtn = document.getElementById('btn-toggle-sound');
-    const soundSvg = document.getElementById('sound-svg');
-    if (toggleSoundBtn && soundSvg) {
-      toggleSoundBtn.addEventListener('click', () => {
-        soundEnabled = !soundEnabled;
-        localStorage.setItem('nsp_sound', String(soundEnabled));
-        toggleSoundBtn.setAttribute('aria-pressed', String(soundEnabled));
-        soundSvg.innerHTML = `<use href="${soundEnabled ? '#icon-bell' : '#icon-bell-off'}"/>`;
-        if (soundEnabled) {
-          playFestiveChime('bell');
-          showToast('Clochettes festives activées');
-        } else {
-          showToast('Sons de fête coupés');
-        }
-      });
-      soundSvg.innerHTML = `<use href="${soundEnabled ? '#icon-bell' : '#icon-bell-off'}"/>`;
-    }
-
     const searchInput = document.getElementById('shop-search-input');
     const searchClear = document.getElementById('search-clear-btn');
 
@@ -1524,7 +1372,7 @@
   }
 
   // =========================================================================
-  // 12. INITIALISATION GÉNÉRALE
+  // 11. INITIALISATION GÉNÉRALE
   // =========================================================================
 
   function init() {
@@ -1537,7 +1385,6 @@
     initEventListeners();
     initScrollReveal();
     initTypewriter();
-    initSparklesCanvas();
   }
 
   window.NSP = {
