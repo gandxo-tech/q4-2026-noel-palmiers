@@ -1,1399 +1,1243 @@
 <!doctype html>
-<html lang="fr">
+<html lang="fr" dir="ltr">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Noël sous les Palmiers – Décoration de Noël artisanale en raphia, wax et teck · Cotonou</title>
-  <meta name="description" content="Sapins en raphia naturel tressé, boules en wax revalorisé, crèches sculptées à Abomey. Découvrez la féerie d'un Noël tropical et artisanal, livré sous le sapin avant le 24 décembre.">
-  <meta name="theme-color" content="#2A9D8F">
-  
+
+  <!-- SEO & Brand Title -->
+  <title>Noël sous les Palmiers – Décoration artisanale en raphia, wax &amp; teck · Cotonou, Bénin</title>
+  <meta name="description" content="Décoration de Noël artisanale et éco-responsable façonnée au Bénin : sapins en raphia naturel, boules en wax revalorisé, crèches en teck d'Abomey et calendrier de l'Avent interactif. Livraison garantie avant le 24 décembre partout au Bénin.">
+  <meta name="keywords" content="décoration noël bénin, sapin raphia cotenou, boules de noël wax, crèche bois teck abomey, artisanat béninois, noël tropical, cadeaux noël cotonou, fait main bénin">
+  <meta name="author" content="Noël sous les Palmiers">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#173832">
+
+  <!-- OpenGraph / Facebook / WhatsApp -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Noël sous les Palmiers – Décoration artisanale de Noël · Bénin">
-  <meta property="og:description" content="Sapins en raphia, boules en wax, crèches en bois de teck : la déco de Noël tropicale et durable. Calendrier de l'Avent interactif et livraison garantie avant Noël.">
-  <meta property="og:image" content="img/hero.webp">
+  <meta property="og:site_name" content="Noël sous les Palmiers">
+  <meta property="og:title" content="Noël sous les Palmiers – La féerie de Noël façonnée à la main au Bénin">
+  <meta property="og:description" content="Sapins en raphia durable, boules en wax revalorisé, crèches sculptées en teck noble. Découvrez la magie d'un Noël tropical, éthique et féerique.">
+  <meta property="og:image" content="/img/hero.webp">
+  <meta property="og:image:alt" content="Pack Salon Féerique Noël sous les Palmiers">
   <meta property="og:locale" content="fr_FR">
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%232A9D8F'/%3E%3Cpath d='M16 5l7 11h-4l5 9H8l5-9H9z' fill='%23FFF4E0'/%3E%3Ccircle cx='16' cy='5' r='2.5' fill='%23FF6F59'/%3E%3C/svg%3E">
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Noël sous les Palmiers – Décoration de Noël artisanale au Bénin">
+  <meta name="twitter:description" content="Sapins en raphia durable, boules en wax de Dantokpa, crèches en teck noble d'Abomey. Livraison garantie avant Noël à Cotonou et Calavi.">
+  <meta name="twitter:image" content="/img/hero.webp">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23173832'/%3E%3Cpath d='M16 5l7 10h-4l5 8H8l5-8H9z' fill='%23FFF8F0'/%3E%3Ccircle cx='16' cy='5' r='2.5' fill='%23DDA13B'/%3E%3Cpath d='M16 23v4' stroke='%23DDA13B' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+
+  <!-- Preconnect Fonts for Fast Loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap" rel="stylesheet">
-  <link rel="preload" as="image" href="img/hero.webp" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,400&display=swap" rel="stylesheet">
 
-  <style>
-    /* ==========================================================================
-       Noël sous les Palmiers — Thème Design System 60-30-10 (Vanilla Single File)
-       ========================================================================== */
-    :root {
-      --bg: #FFF4E0;
-      --bg-subtle: #FDF1D8;
-      --surface: #FFFBF3;
-      --surface-card: #FFFFFF;
-      --fg: #1E3A36;
-      --fg-heading: #142825;
-      --muted: #5C6F6B;
-      --muted-light: #7E918D;
-      
-      --sec: #2A9D8F;
-      --sec-dark: #1E7167;
-      --sec-light: #E6F6F4;
-      --on-sec: #FFFFFF;
-      
-      --acc: #FF6F59;
-      --acc-hover: #E85B45;
-      --acc-text: #C4442F;
-      --on-acc: #FFFFFF;
-      
-      --gold: #E9C46A;
-      --gold-dark: #B8860B;
-      --gold-bg: #FFF8E7;
-      
-      --line: #EEDCC4;
-      --line-strong: #DEC3A2;
-      --warn: #E5484D;
-      --success: #1FAF55;
-      
-      --font-display: 'Baloo 2', system-ui, -apple-system, sans-serif;
-      --font-body: 'Nunito Sans', system-ui, -apple-system, sans-serif;
-      
-      --radius-sm: 8px;
-      --radius-md: 14px;
-      --radius-lg: 22px;
-      --radius-pill: 9999px;
-      
-      --shadow-sm: 0 2px 8px -2px rgba(30, 58, 54, 0.08);
-      --shadow-md: 0 10px 25px -8px rgba(30, 58, 54, 0.12);
-      --shadow-lg: 0 20px 40px -15px rgba(30, 58, 54, 0.18);
-      --shadow-acc: 0 8px 24px -6px rgba(255, 111, 89, 0.45);
-    }
+  <link rel="stylesheet" href="/style.css">
 
-    *, *::before, *::after { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background-color: var(--bg);
-      color: var(--fg);
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    img { max-width: 100%; height: auto; display: block; }
-    a { color: inherit; text-decoration: none; }
-    button, input, select, textarea { font: inherit; color: inherit; }
-    button { cursor: pointer; border: none; background: none; }
-    h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 700; line-height: 1.15; color: var(--fg-heading); margin: 0 0 0.5em; text-wrap: balance; }
-    p { margin: 0 0 1em; }
-    .wrap { width: min(1200px, 100% - 2.5rem); margin-inline: auto; }
-    .tnum { font-variant-numeric: tabular-nums; }
-    .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-    .skip { position: absolute; left: -999px; top: 0; background: var(--acc); color: var(--on-acc); padding: 0.75rem 1.25rem; font-weight: 700; z-index: 1000; border-radius: 0 0 var(--radius-sm) 0; }
-    .skip:focus { left: 0; }
-    :focus-visible { outline: 3px solid var(--acc); outline-offset: 3px; }
-    [hidden] { display: none !important; }
-
-    /* Announcement Bar */
-    .announcement-bar { background: var(--sec); color: var(--on-sec); font-size: 0.85rem; font-weight: 600; padding: 0.55rem 1rem; border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
-    .announcement-bar .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
-    .announcement-text { display: flex; align-items: center; gap: 0.5rem; }
-    .demo-selector { display: inline-flex; align-items: center; gap: 0.35rem; background: rgba(0, 0, 0, 0.18); padding: 0.2rem 0.6rem; border-radius: var(--radius-pill); font-size: 0.78rem; }
-    .demo-selector select { background: transparent; border: none; color: #fff; font-weight: 700; cursor: pointer; outline: none; }
-    .demo-selector select option { background: #1E3A36; color: #fff; }
-
-    /* Header */
-    .hdr { position: sticky; top: 0; z-index: 60; background: rgba(255, 244, 224, 0.94); backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); transition: box-shadow 0.2s; }
-    .hdr.scrolled { box-shadow: 0 4px 20px rgba(30, 58, 54, 0.08); }
-    .hdr .wrap { display: flex; align-items: center; gap: 1.5rem; min-height: 72px; }
-    .logo { display: flex; align-items: center; gap: 0.65rem; font-family: var(--font-display); font-size: 1.35rem; font-weight: 800; white-space: nowrap; }
-    .logo svg { width: 38px; height: 38px; flex-shrink: 0; }
-    .logo-accent { color: var(--acc); }
-    .nav { display: flex; align-items: center; gap: 1.4rem; margin-left: auto; }
-    .nav a { font-size: 0.95rem; font-weight: 600; color: var(--fg); opacity: 0.85; transition: opacity 0.15s, color 0.15s; padding: 0.3rem 0; position: relative; }
-    .nav a:hover, .nav a[aria-current="page"] { opacity: 1; color: var(--acc-text); }
-    .nav a[aria-current="page"]::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 2.5px; background: var(--acc); border-radius: var(--radius-pill); }
-    .cart-btn { position: relative; display: inline-flex; align-items: center; gap: 0.5rem; background: var(--surface); border: 1.5px solid var(--line-strong); border-radius: var(--radius-pill); padding: 0.5rem 1rem; font-weight: 700; font-size: 0.92rem; color: var(--fg); transition: all 0.2s; }
-    .cart-btn:hover { border-color: var(--sec); background: #fff; transform: translateY(-1px); }
-    .cart-btn svg { width: 20px; height: 20px; color: var(--sec); }
-    .cart-count { min-width: 22px; height: 22px; border-radius: var(--radius-pill); background: var(--acc); color: var(--on-acc); font-size: 0.75rem; font-weight: 800; display: inline-grid; place-items: center; padding: 0 0.35rem; }
-    .cart-count.bump { animation: bump 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
-    @keyframes bump { 0% { transform: scale(1); } 50% { transform: scale(1.4); } 100% { transform: scale(1); } }
-    @media (max-width: 860px) { .nav { display: none; } .logo { font-size: 1.15rem; } .cart-label { display: none; } .cart-btn { padding: 0.5rem 0.75rem; } }
-
-    /* Buttons */
-    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; border-radius: var(--radius-pill); padding: 0.85rem 1.6rem; font-weight: 800; font-size: 0.98rem; line-height: 1.2; transition: transform 0.15s, box-shadow 0.15s, background-color 0.15s; min-height: 48px; white-space: nowrap; user-select: none; }
-    .btn:active { transform: translateY(1px) scale(0.99); }
-    .btn-acc { background: var(--acc); color: var(--on-acc); box-shadow: var(--shadow-acc); }
-    .btn-acc:hover { background: var(--acc-hover); transform: translateY(-2px); box-shadow: 0 12px 28px -8px rgba(255, 111, 89, 0.55); }
-    .btn-ghost { background: transparent; color: var(--sec-dark); border: 2px solid var(--sec); }
-    .btn-ghost:hover { background: rgba(42, 157, 143, 0.08); transform: translateY(-2px); }
-    .btn-wa { background: #1FAF55; color: #fff; box-shadow: 0 6px 18px -4px rgba(31, 175, 85, 0.4); }
-    .btn-wa:hover { background: #199849; transform: translateY(-2px); }
-    .btn-sm { padding: 0.55rem 1.1rem; min-height: 40px; font-size: 0.88rem; }
-    .btn-block { width: 100%; }
-
-    /* Hero */
-    .hero { padding: clamp(2rem, 5vw, 4rem) 0 clamp(2.5rem, 6vw, 4.5rem); position: relative; overflow: hidden; }
-    .hero-in { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.82rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--acc-text); margin-bottom: 0.8rem; }
-    .hero h1 { font-size: clamp(2.5rem, 5.2vw, 4.4rem); line-height: 1.05; margin-bottom: 1.2rem; }
-    .sun-highlight { color: var(--acc); position: relative; display: inline-block; }
-    .sun-highlight::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0.08em; height: 0.22em; background: var(--gold); opacity: 0.4; border-radius: var(--radius-pill); z-index: -1; }
-    .lead { font-size: clamp(1.05rem, 2vw, 1.2rem); color: var(--muted); max-width: 46ch; line-height: 1.65; margin-bottom: 1.8rem; }
-    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-bottom: 2.2rem; }
-    .hero-fig { margin: 0; position: relative; }
-    .hero-fig img { border-radius: 32px; aspect-ratio: 4 / 3; object-fit: cover; box-shadow: 16px 16px 0 var(--sec); border: 4px solid #fff; transition: transform 0.4s ease; }
-    .hero-caption { position: absolute; left: 1.2rem; bottom: 1.2rem; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(8px); padding: 0.6rem 1.2rem; border-radius: var(--radius-pill); font-size: 0.88rem; font-weight: 700; color: var(--fg); box-shadow: var(--shadow-md); display: flex; align-items: center; gap: 0.5rem; }
-    .hero-caption b { color: var(--sec); }
-
-    /* Countdown */
-    .countdown-box { background: rgba(255, 255, 255, 0.8); border: 1.5px solid var(--line-strong); border-radius: var(--radius-lg); padding: 1.2rem 1.4rem; display: inline-block; backdrop-filter: blur(6px); box-shadow: var(--shadow-sm); }
-    .cd-label { font-size: 0.85rem; font-weight: 800; color: var(--sec-dark); margin-bottom: 0.6rem; display: block; }
-    .cd { display: inline-flex; gap: 0.6rem; align-items: stretch; }
-    .cd b { display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 64px; padding: 0.65rem 0.4rem; border-radius: var(--radius-md); background: #fff; color: var(--sec); font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; line-height: 1; box-shadow: 0 4px 0 var(--line-strong); font-variant-numeric: tabular-nums; }
-    .cd b small { font-family: var(--font-body); font-size: 0.65rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-top: 0.35rem; }
-    @media (max-width: 900px) { .hero-in { grid-template-columns: 1fr; } .hero-fig img { box-shadow: 10px 10px 0 var(--sec); } }
-
-    /* Quiz Assistant */
-    .quiz-section { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 3rem 0; }
-    .quiz-card { background: #fff; border-radius: var(--radius-lg); border: 1.5px solid var(--line); padding: 2rem; box-shadow: var(--shadow-sm); display: grid; grid-template-columns: 1fr 1.2fr; gap: 2rem; align-items: center; }
-    .quiz-steps { display: flex; flex-direction: column; gap: 1rem; }
-    .quiz-options { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    .quiz-btn { background: var(--surface); border: 1.5px solid var(--line); border-radius: var(--radius-md); padding: 1rem; text-align: left; font-weight: 700; font-size: 0.92rem; transition: all 0.2s; cursor: pointer; display: flex; flex-direction: column; gap: 0.25rem; }
-    .quiz-btn:hover { border-color: var(--sec); background: var(--sec-light); transform: translateY(-2px); }
-    .quiz-btn b { color: var(--sec-dark); font-size: 1rem; }
-    .quiz-btn span { font-size: 0.8rem; color: var(--muted); font-weight: 600; }
-    .quiz-result { background: var(--bg); border: 1.5px dashed var(--sec); border-radius: var(--radius-md); padding: 1.5rem; text-align: center; display: none; }
-    .quiz-result.active { display: block; animation: fadeIn 0.3s ease; }
-    @media (max-width: 768px) { .quiz-card { grid-template-columns: 1fr; padding: 1.25rem; } .quiz-options { grid-template-columns: 1fr; } }
-
-    /* Common Sections & Grids */
-    .sec { padding: clamp(3rem, 6vw, 5.5rem) 0; }
-    .sec-h { display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
-    .sec-h h2 { font-size: clamp(1.9rem, 3.8vw, 2.8rem); margin: 0; }
-    .muted { color: var(--muted); }
-
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.6rem; }
-    .card { position: relative; display: flex; flex-direction: column; background: var(--surface-card); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: transform 0.25s ease, box-shadow 0.25s ease; }
-    .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
-    .card-media { position: relative; aspect-ratio: 1; overflow: hidden; background: #FCEBD0; }
-    .card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
-    .card:hover .card-media img { transform: scale(1.06); }
-    .card-badge { position: absolute; top: 0.8rem; left: 0.8rem; z-index: 2; background: var(--sec); color: #fff; font-size: 0.75rem; font-weight: 800; padding: 0.35rem 0.7rem; border-radius: var(--radius-pill); text-transform: uppercase; }
-    .card-badge.alt { background: var(--acc); }
-    .card-body { padding: 1.2rem; display: flex; flex-direction: column; gap: 0.4rem; flex: 1; }
-    .card-meta { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
-    .card h3 { font-size: 1.15rem; margin: 0; font-family: var(--font-display); }
-    .card h3 a { color: var(--fg-heading); }
-    .card h3 a::after { content: ""; position: absolute; inset: 0; z-index: 1; }
-    .stars { color: #F4A261; font-size: 0.88rem; display: flex; align-items: center; gap: 0.25rem; }
-    .stars span { color: var(--muted); font-size: 0.78rem; font-weight: 600; }
-    .price { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; margin-top: 0.2rem; font-variant-numeric: tabular-nums; }
-    .price strong { font-size: 1.25rem; font-weight: 800; color: var(--fg-heading); }
-    .price s { color: var(--muted-light); font-size: 0.92rem; }
-    .stock-tag { font-size: 0.8rem; font-weight: 700; color: var(--warn); display: flex; align-items: center; gap: 0.35rem; }
-    .card-add-btn { position: relative; z-index: 2; margin-top: auto; padding-top: 0.6rem; }
-    @media (max-width: 560px) { .grid { grid-template-columns: 1fr 1fr; gap: 0.85rem; } .card-body { padding: 0.85rem; } .card h3 { font-size: 1rem; } .price strong { font-size: 1.05rem; } }
-
-    /* Craftsmanship Section */
-    .craft-section { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: clamp(3.5rem, 6vw, 5.5rem) 0; }
-    .craft-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
-    .craft-img { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); border: 4px solid #fff; }
-    .craft-pillars { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem; }
-    .pillar { background: #fff; border-radius: var(--radius-md); padding: 1.2rem; border: 1px solid var(--line); }
-    .pillar h4 { font-size: 1.05rem; margin-bottom: 0.3rem; color: var(--sec-dark); }
-    .pillar p { font-size: 0.88rem; color: var(--muted); margin: 0; }
-    @media (max-width: 860px) { .craft-grid { grid-template-columns: 1fr; } .craft-pillars { grid-template-columns: 1fr; } }
-
-    /* Advent Calendar */
-    .avent-sec { background: var(--sec); color: #fff; position: relative; overflow: hidden; }
-    .avent-sec .sec-h h2 { color: #fff; }
-    .avent-sec .eyebrow { color: var(--gold); }
-    .avent-sec .muted { color: #D6F0EC; }
-    .cal { display: grid; grid-template-columns: repeat(8, 1fr); gap: 0.8rem; max-width: 960px; margin: 0 auto; }
-    @media (max-width: 860px) { .cal { grid-template-columns: repeat(6, 1fr); } }
-    @media (max-width: 580px) { .cal { grid-template-columns: repeat(4, 1fr); gap: 0.5rem; } }
-    .day { aspect-ratio: 1; border-radius: var(--radius-md); border: 2px dashed rgba(255, 255, 255, 0.4); background: rgba(255, 255, 255, 0.1); color: #fff; font-family: var(--font-display); font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-weight: 800; position: relative; transition: transform 0.2s, background-color 0.2s; display: grid; place-items: center; cursor: pointer; }
-    .day:hover { transform: scale(1.06); background: rgba(255, 255, 255, 0.2); }
-    .day.open { background: #FFF4E0; color: var(--sec-dark); border: 2px solid #FFF4E0; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); }
-    .day.open::after { content: "✓"; position: absolute; top: 4px; right: 6px; font-size: 0.75rem; color: var(--acc); }
-    .day.today { background: var(--acc); border: 2px solid #fff; color: #fff; animation: pulse 1.8s infinite; }
-    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 111, 89, 0.6); } 70% { box-shadow: 0 0 0 12px rgba(255, 111, 89, 0); } 100% { box-shadow: 0 0 0 0 rgba(255, 111, 89, 0); } }
-    .day.lock { opacity: 0.65; }
-    .day.shake { animation: shake 0.4s ease; }
-    @keyframes shake { 0%, 100% { transform: translateX(0); } 25% { transform: translateX(-6px); } 75% { transform: translateX(6px); } }
-
-    /* Santa Letter */
-    .letter-wrap { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 3rem; align-items: flex-start; }
-    .letter { background: #fff; border-radius: 24px; padding: 2rem; box-shadow: var(--shadow-lg); border-top: 8px solid var(--acc); border: 1px solid var(--line); background-image: repeating-linear-gradient(transparent 0 31px, #F6EBD7 31px 32px); }
-    .l-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.2rem; }
-    .l-row label { display: grid; gap: 0.35rem; font-weight: 700; font-size: 0.88rem; color: var(--fg); }
-    .l-row input { padding: 0.75rem 0.9rem; border: 1.5px solid var(--line-strong); border-radius: var(--radius-sm); background: #fff; }
-    .wishes { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
-    .wish { display: grid; grid-template-columns: auto 44px 1fr; gap: 0.6rem; align-items: center; padding: 0.6rem; border: 1.5px solid var(--line); border-radius: var(--radius-md); background: #fff; cursor: pointer; font-size: 0.85rem; font-weight: 700; transition: border-color 0.15s, background-color 0.15s; }
-    .wish img { width: 44px; height: 44px; border-radius: var(--radius-sm); object-fit: cover; }
-    .wish b { display: block; font-size: 0.8rem; color: var(--sec-dark); }
-    .wish input { accent-color: var(--acc); width: 18px; height: 18px; }
-    .wish:has(input:checked) { border-color: var(--acc); background: #FFF3EF; }
-    .l-foot { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; padding-top: 1.2rem; border-top: 1.5px dashed var(--line-strong); background: #fff; }
-    .l-btns { display: flex; gap: 0.6rem; flex-wrap: wrap; }
-    @media (max-width: 900px) { .letter-wrap { grid-template-columns: 1fr; } .l-row { grid-template-columns: 1fr; } .wishes { grid-template-columns: 1fr; } }
-
-    /* Delivery & Reviews */
-    .deliv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
-    .deliv-card { background: #fff; border-radius: var(--radius-lg); padding: 1.8rem; border: 2px solid var(--line); box-shadow: var(--shadow-sm); }
-    .deliv-card.highlight { border-color: var(--acc); }
-    .deliv-card b { display: block; font-family: var(--font-display); font-size: 2.2rem; color: var(--sec); line-height: 1; margin-bottom: 0.5rem; }
-    .deliv-card.highlight b { color: var(--acc-text); }
-    @media (max-width: 768px) { .deliv-grid { grid-template-columns: 1fr; } }
-
-    .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.4rem; }
-    .review-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 1.8rem; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; gap: 0.75rem; }
-    .review-card p { font-style: italic; margin: 0; color: var(--fg); }
-    .review-card footer { margin-top: auto; font-size: 0.88rem; font-weight: 700; color: var(--sec-dark); }
-    .review-card footer small { display: block; font-weight: 600; color: var(--muted); font-size: 0.8rem; }
-
-    /* FAQ */
-    .faq-wrap { max-width: 860px; margin: 0 auto; }
-    .faq-item { border-bottom: 1.5px solid var(--line); padding: 1.2rem 0; }
-    .faq-item summary { font-weight: 800; cursor: pointer; font-size: 1.1rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: var(--fg-heading); }
-    .faq-item summary::-webkit-details-marker { display: none; }
-    .faq-item summary::after { content: "+"; font-size: 1.6rem; font-weight: 400; color: var(--sec); line-height: 1; }
-    .faq-item[open] summary::after { content: "–"; }
-    .faq-item p { margin: 0.8rem 0 0; color: var(--muted); line-height: 1.6; }
-
-    /* Shop View & PDP */
-    .shop-hero { padding: 1.5rem 0 1rem; }
-    .crumbs { font-size: 0.88rem; color: var(--muted); margin-bottom: 1rem; }
-    .toolbar { display: flex; justify-content: space-between; gap: 1.2rem; flex-wrap: wrap; align-items: center; margin: 1.5rem 0 2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--line); }
-    .chips { display: flex; gap: 0.5rem; flex-wrap: wrap; }
-    .chip { border: 1.5px solid var(--line-strong); background: #fff; border-radius: var(--radius-pill); padding: 0.5rem 1.1rem; font-weight: 700; font-size: 0.88rem; color: var(--fg); transition: all 0.15s; }
-    .chip:hover { border-color: var(--sec); }
-    .chip[aria-pressed="true"] { background: var(--sec); color: #fff; border-color: var(--sec); }
-    .select-box { border: 1.5px solid var(--line-strong); background: #fff; border-radius: var(--radius-sm); padding: 0.6rem 0.9rem; font-weight: 700; font-size: 0.88rem; }
-
-    .pdp { display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(1.8rem, 4vw, 3.5rem); align-items: flex-start; padding-bottom: 4rem; }
-    .pdp-media { position: sticky; top: 90px; border-radius: var(--radius-lg); overflow: hidden; background: #FCEBD0; border: 4px solid #fff; box-shadow: var(--shadow-md); aspect-ratio: 1; }
-    .pdp-media img { width: 100%; height: 100%; object-fit: cover; }
-    .pdp-media.combo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
-    .pdp-info { display: flex; flex-direction: column; gap: 1rem; }
-    .pdp h1 { font-size: clamp(2rem, 3.8vw, 2.8rem); margin-bottom: 0.3rem; }
-    .save-badge { display: inline-block; background: rgba(255, 111, 89, 0.15); color: var(--acc-text); font-weight: 800; font-size: 0.85rem; padding: 0.35rem 0.75rem; border-radius: var(--radius-sm); margin-left: 0.5rem; }
-    .opt-label { font-weight: 700; font-size: 0.92rem; margin: 0.8rem 0 0.4rem; display: block; }
-    .qty-control { display: inline-flex; border: 1.5px solid var(--line-strong); border-radius: var(--radius-pill); background: #fff; overflow: hidden; }
-    .qty-control button { width: 44px; height: 48px; font-size: 1.2rem; font-weight: 700; display: grid; place-items: center; }
-    .qty-control button:hover { background: var(--bg); }
-    .qty-control output { width: 44px; display: grid; place-items: center; font-weight: 800; font-variant-numeric: tabular-nums; }
-    .buy-row { display: flex; gap: 0.8rem; margin: 1.2rem 0; flex-wrap: wrap; }
-    .buy-row .btn-acc { flex: 1; min-width: 220px; }
-    .info-list { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: 0.6rem; font-size: 0.92rem; }
-    .info-list li { display: flex; gap: 0.75rem; align-items: flex-start; }
-    .info-list svg { width: 20px; height: 20px; flex-shrink: 0; color: var(--sec); margin-top: 2px; }
-    .pdp details { border-top: 1px solid var(--line); padding: 0.9rem 0; }
-    .pdp summary { font-weight: 800; cursor: pointer; list-style: none; display: flex; justify-content: space-between; color: var(--fg-heading); }
-    .pdp summary::after { content: "+"; font-size: 1.4rem; color: var(--sec); }
-    .pdp details[open] summary::after { content: "–"; }
-    @media (max-width: 860px) { .pdp { grid-template-columns: 1fr; } .pdp-media { position: static; } }
-
-    /* Cart Drawer */
-    .overlay { position: fixed; inset: 0; background: rgba(0, 0, 0, 0.55); z-index: 90; opacity: 0; pointer-events: none; transition: opacity 0.25s; }
-    .overlay.open { opacity: 1; pointer-events: auto; }
-    .drawer { position: fixed; top: 0; right: 0; bottom: 0; width: min(440px, 100%); background: var(--surface); color: var(--fg); z-index: 100; transform: translateX(100%); transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1); display: flex; flex-direction: column; box-shadow: var(--shadow-lg); }
-    .drawer.open { transform: none; }
-    .drawer-h { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 1.4rem; border-bottom: 1px solid var(--line); background: #fff; }
-    .drawer-h h2 { font-size: 1.35rem; margin: 0; }
-    .x-btn { font-size: 1.8rem; line-height: 1; width: 44px; height: 44px; display: grid; place-items: center; border-radius: var(--radius-sm); color: var(--muted); }
-    .drawer-b { flex: 1; overflow-y: auto; padding: 1.2rem 1.4rem; }
-    .drawer-f { border-top: 1px solid var(--line); padding: 1.2rem 1.4rem calc(1.2rem + env(safe-area-inset-bottom)); display: grid; gap: 0.75rem; background: #fff; }
-    .ship-progress { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-md); padding: 0.85rem; margin-bottom: 1rem; font-size: 0.85rem; font-weight: 700; display: grid; gap: 0.4rem; }
-    .progress-bar { height: 8px; border-radius: var(--radius-pill); background: var(--bg); overflow: hidden; }
-    .progress-bar i { display: block; height: 100%; background: var(--sec); border-radius: var(--radius-pill); transition: width 0.3s ease; }
-    .cart-line { display: grid; grid-template-columns: 64px 1fr auto; gap: 0.9rem; align-items: center; padding: 0.9rem 0; border-bottom: 1px solid var(--line); }
-    .cart-line img { width: 64px; height: 64px; object-fit: cover; border-radius: var(--radius-sm); background: #FCEBD0; }
-    .cart-line h4 { font-family: var(--font-body); font-size: 0.95rem; margin: 0 0 0.2rem; font-weight: 700; }
-    .rm-btn { color: var(--muted); font-size: 0.8rem; text-decoration: underline; cursor: pointer; }
-    .tot-row { display: flex; justify-content: space-between; font-weight: 700; font-size: 0.95rem; }
-    .tot-row.grand { font-size: 1.3rem; font-weight: 800; color: var(--fg-heading); }
-    .code-row { display: flex; gap: 0.5rem; }
-    .code-row input { flex: 1; border: 1.5px solid var(--line-strong); border-radius: var(--radius-sm); padding: 0.6rem 0.8rem; text-transform: uppercase; font-weight: 700; background: #fff; }
-    .payment-badges { display: flex; gap: 0.4rem; flex-wrap: wrap; justify-content: center; margin-top: 0.4rem; }
-    .payment-badges span { font-size: 0.72rem; font-weight: 800; background: var(--bg); border: 1px solid var(--line-strong); border-radius: var(--radius-sm); padding: 0.2rem 0.5rem; color: var(--sec-dark); }
-
-    /* Modals & Toasts */
-    .modal { position: fixed; inset: 0; z-index: 120; display: grid; place-items: center; padding: 1.2rem; }
-    .modal-bg { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.65); backdrop-filter: blur(4px); }
-    .modal-card { position: relative; background: #fff; color: var(--fg); border-radius: var(--radius-lg); padding: 2.2rem; max-width: 500px; width: 100%; box-shadow: var(--shadow-lg); border: 1px solid var(--line); }
-    .toast { position: fixed; left: 50%; bottom: 2rem; transform: translate(-50%, 200%); opacity: 0; visibility: hidden; background: var(--fg-heading); color: #fff; padding: 0.9rem 1.4rem; border-radius: var(--radius-pill); font-weight: 700; font-size: 0.92rem; z-index: 140; box-shadow: var(--shadow-lg); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s; pointer-events: none; max-width: calc(100% - 2rem); text-align: center; }
-    .toast.show { transform: translate(-50%, 0); opacity: 1; visibility: visible; }
-    .wa-float { position: fixed; right: 1.5rem; bottom: 1.5rem; z-index: 50; width: 58px; height: 58px; border-radius: var(--radius-pill); background: #1FAF55; color: #fff; display: grid; place-items: center; box-shadow: 0 8px 25px -4px rgba(31, 175, 85, 0.6); transition: transform 0.2s; }
-    .wa-float:hover { transform: scale(1.08) translateY(-2px); }
-    .wa-float svg { width: 32px; height: 32px; }
-
-    /* Footer */
-    .ftr { border-top: 1px solid var(--line); background: var(--surface); padding: 4rem 0 2rem; font-size: 0.92rem; }
-    .ftr-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 2.5rem; }
-    .ftr h4 { font-family: var(--font-body); font-size: 0.85rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sec-dark); margin-bottom: 1.2rem; }
-    .ftr ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.6rem; }
-    .ftr a { color: var(--muted); transition: color 0.15s; }
-    .ftr a:hover { color: var(--acc-text); }
-    .news-form { display: flex; gap: 0.5rem; margin-top: 0.8rem; }
-    .news-form input { flex: 1; min-width: 0; border: 1.5px solid var(--line-strong); border-radius: var(--radius-sm); background: #fff; padding: 0.65rem 0.85rem; }
-    .ftr-b { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; font-size: 0.82rem; color: var(--muted); }
-
-    .rv { opacity: 0; transform: translateY(20px); transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
-    .rv.in { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } .rv { opacity: 1; transform: none; } }
-  </style>
+  <!-- Schema.org JSON-LD Structured Data for Enhanced Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Store",
+        "@id": "https://noelsouslespalmiers.bj/#store",
+        "name": "Noël sous les Palmiers",
+        "description": "Atelier artisanal béninois de décorations de Noël éco-responsables en raphia, wax revalorisé et bois de teck d'Abomey.",
+        "image": "/img/hero.webp",
+        "priceRange": "4 500 FCFA - 49 900 FCFA",
+        "currenciesAccepted": "XOF",
+        "paymentAccepted": "Cash, Mobile Money (MTN MoMo, Moov Money, Wave)",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Haie Vive / Boulevard de la Marina",
+          "addressLocality": "Cotonou",
+          "addressRegion": "Littoral",
+          "addressCountry": "BJ"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "6.3654",
+          "longitude": "2.4183"
+        },
+        "telephone": "+22997000000",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "08:00",
+            "closes": "21:00"
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "name": "Collection de Décorations de Noël Artisanales Béninoises",
+        "description": "Sapins en raphia fait main, suspensions en wax et crèches sculptées au Bénin",
+        "itemListElement": [
+          {
+            "@type": "Product",
+            "position": 1,
+            "name": "Pack Salon Féerique complet",
+            "image": "/img/hero.webp",
+            "description": "Sapin 1,5m en raphia naturel, 12 boules wax assorties, guirlande LED cauris et étoile de cime pyrogravée.",
+            "offers": {
+              "@type": "Offer",
+              "price": "49900",
+              "priceCurrency": "XOF",
+              "availability": "https://schema.org/InStock",
+              "seller": { "@id": "https://noelsouslespalmiers.bj/#store" }
+            }
+          },
+          {
+            "@type": "Product",
+            "position": 2,
+            "name": "Sapin en Raphia tressé main",
+            "image": "/img/sapin-raphia.webp",
+            "description": "Sapin majestueux pliable et réutilisable, tressé à la main en fibres de raphia naturel sur socle en teck massif.",
+            "offers": {
+              "@type": "Offer",
+              "price": "34900",
+              "priceCurrency": "XOF",
+              "availability": "https://schema.org/InStock",
+              "seller": { "@id": "https://noelsouslespalmiers.bj/#store" }
+            }
+          },
+          {
+            "@type": "Product",
+            "position": 3,
+            "name": "Coffret Boules en Wax revalorisé",
+            "image": "/img/boules-wax.webp",
+            "description": "Boules de Noël incassables parées de véritables chutes de wax aux motifs festifs chatoyants.",
+            "offers": {
+              "@type": "Offer",
+              "price": "11900",
+              "priceCurrency": "XOF",
+              "availability": "https://schema.org/InStock",
+              "seller": { "@id": "https://noelsouslespalmiers.bj/#store" }
+            }
+          },
+          {
+            "@type": "Product",
+            "position": 4,
+            "name": "Crèche de la Nativité en Teck d'Abomey",
+            "image": "/img/creche.webp",
+            "description": "Crèche sculptée à la main dans du teck noble par les maîtres artisans sculpteurs d'Abomey.",
+            "offers": {
+              "@type": "Offer",
+              "price": "38500",
+              "priceCurrency": "XOF",
+              "availability": "https://schema.org/InStock",
+              "seller": { "@id": "https://noelsouslespalmiers.bj/#store" }
+            }
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quels sont les délais de livraison pour Noël à Cotonou et Calavi ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Livraison en 24h à 48h par nos coursiers dédiés à Cotonou et Abomey-Calavi. Toute commande passée avant le 20 décembre à 23h59 est garantie sous le sapin pour le réveillon."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quels sont les moyens de paiement acceptés ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nous acceptons les paiements Mobile Money (MTN MoMo, Moov Money, Wave) ainsi que le règlement en espèces directement à la livraison."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Les sapins en raphia sont-ils réutilisables d'une année sur l'autre ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui ! Nos sapins sont conçus avec une structure pliable en teck et des fibres de raphia naturel traitées pour durer 5 ans et plus sans perdre leur tenue."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <a class="skip" href="#main">Aller au contenu principal</a>
+
+  <!-- =========================================================================
+       BIBLIOTHÈQUE D'ICÔNES VECTORIELLES PURES (SVG ONLY, ZERO EMOJI)
+       ========================================================================= -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;" id="svg-icons-lib">
+    <symbol id="icon-tree" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2L5 12h4l-3 6h12l-3-6h4z"/>
+      <path d="M12 18v4"/>
+    </symbol>
+    <symbol id="icon-palm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M13 8c0-3.5-2.5-6-6-6 0 3.5 2.5 6 6 6z"/>
+      <path d="M11 8c0-3.5 2.5-6 6-6 0 3.5-2.5 6-6 6z"/>
+      <path d="M12 8c-3.5 0-6 2.5-6 6 3.5 0 6-2.5 6-6z"/>
+      <path d="M12 8c3.5 0 6 2.5 6 6-3.5 0-6-2.5-6-6z"/>
+      <path d="M12 8v14"/>
+    </symbol>
+    <symbol id="icon-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="1" y="3" width="15" height="13" rx="2"/>
+      <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+      <circle cx="5.5" cy="18.5" r="2.5"/>
+      <circle cx="18.5" cy="18.5" r="2.5"/>
+    </symbol>
+    <symbol id="icon-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 12 20 22 4 22 4 12"/>
+      <rect x="2" y="7" width="20" height="5" rx="1"/>
+      <line x1="12" y1="22" x2="12" y2="7"/>
+      <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/>
+      <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/>
+    </symbol>
+    <symbol id="icon-sparkle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/>
+    </symbol>
+    <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1.2">
+      <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    </symbol>
+    <symbol id="icon-bell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+      <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+    </symbol>
+    <symbol id="icon-bell-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+      <path d="M18.63 13A17.89 17.89 0 0 1 18 8"/>
+      <path d="M6.26 6.26A5.86 5.86 0 0 0 6 8c0 7-3 9-3 9h14"/>
+      <path d="M18 8a6 6 0 0 0-9.33-5"/>
+      <line x1="1" y1="1" x2="23" y2="23"/>
+    </symbol>
+    <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+      <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+    </symbol>
+    <symbol id="icon-hands" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v3"/>
+      <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v6"/>
+      <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/>
+      <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/>
+    </symbol>
+    <symbol id="icon-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </symbol>
+    <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <polyline points="12 6 12 12 16 14"/>
+    </symbol>
+    <symbol id="icon-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <path d="M9 12l2 2 4-4"/>
+    </symbol>
+    <symbol id="icon-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+      <line x1="1" y1="10" x2="23" y2="10"/>
+    </symbol>
+    <symbol id="icon-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+      <line x1="3" y1="6" x2="21" y2="6"/>
+      <path d="M16 10a4 4 0 0 1-8 0"/>
+    </symbol>
+    <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="20 6 9 17 4 12"/>
+    </symbol>
+    <symbol id="icon-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="5" y1="12" x2="19" y2="12"/>
+      <polyline points="12 5 19 12 12 19"/>
+    </symbol>
+    <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+    </symbol>
+    <symbol id="icon-recipe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+      <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+      <line x1="6" y1="1" x2="6" y2="4"/>
+      <line x1="10" y1="1" x2="10" y2="4"/>
+      <line x1="14" y1="1" x2="14" y2="4"/>
+    </symbol>
+    <symbol id="icon-craft" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m15 12-8.5 8.5c-.83.83-2.17.83-3 0 0 0 0 0 0 0a2.12 2.12 0 0 1 0-3L12 9"/>
+      <path d="M17.64 15 22 10.64"/>
+      <path d="m20.91 3.26-6.36 6.36"/>
+      <path d="m8 6.5 4 4"/>
+    </symbol>
+    <symbol id="icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+      <line x1="7" y1="7" x2="7.01" y2="7"/>
+    </symbol>
+    <symbol id="icon-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="22" y1="2" x2="11" y2="13"/>
+      <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+    </symbol>
+    <symbol id="icon-quote" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+    </symbol>
+    <symbol id="icon-recycle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="7 19 3 19 3 15"/>
+      <path d="M6 10l-3 4 3 4"/>
+      <path d="M3 19h13a4 4 0 0 0 4-4v-1"/>
+      <polyline points="17 5 21 5 21 9"/>
+      <path d="M18 14l3-4-3-4"/>
+      <path d="M21 5H8a4 4 0 0 0-4 4v1"/>
+    </symbol>
+    <symbol id="icon-shell" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2C6.5 2 2 6.5 2 12c0 4.5 3 8 7 9.5V14h6v7.5c4-1.5 7-5 7-9.5 0-5.5-4.5-10-10-10z"/>
+      <line x1="12" y1="2" x2="12" y2="14"/>
+    </symbol>
+  </svg>
+
+  <!-- Accessible Skip Navigation Link -->
+  <a href="#main-content" class="skip-link">Passer directement au contenu principal</a>
 
   <!-- Top Announcement Bar -->
-  <div class="announcement-bar" role="region" aria-label="Annonce et simulateur">
+  <aside class="top-banner" aria-label="Informations urgentes et livraisons de Noël">
     <div class="wrap">
-      <div class="announcement-text">
-        <span>🚚 Livré avant Noël pour toute commande avant le <b>20 décembre</b> · Livraison offerte dès 25 000 FCFA</span>
+      <div class="banner-left">
+        <svg class="svg-ico" aria-hidden="true"><use href="#icon-truck"/></svg>
+        <span>Commandez avant le <strong class="banner-highlight">20 décembre à 23h59</strong> : livraison garantie sous le sapin à Cotonou &amp; Calavi</span>
       </div>
-      <div class="demo-selector">
-        <label for="demo-select">Simulateur temporel :</label>
-        <select id="demo-select" aria-label="Choisir la date simulée pour tester le site">
-          <option value="live">15 décembre (Période active)</option>
-          <option value="before">25 novembre (Avant le 1er déc.)</option>
-          <option value="after">22 décembre (Dernière minute express)</option>
-        </select>
+      <div class="banner-right">
+        <span class="banner-pill">
+          <svg class="svg-ico svg-ico-xs" aria-hidden="true"><use href="#icon-gift"/></svg>
+          Livraison offerte dès 25 000 FCFA
+        </span>
+        <span class="banner-separator" aria-hidden="true">·</span>
+        <span class="banner-momo">MTN MoMo &amp; Moov Money</span>
       </div>
     </div>
-  </div>
+  </aside>
 
-  <!-- Header -->
-  <header class="hdr">
+  <!-- Main Sticky Header -->
+  <header class="header" id="site-header" role="banner">
     <div class="wrap">
-      <a class="logo" href="#/" aria-label="Noël sous les Palmiers, retour à l'accueil">
-        <svg viewBox="0 0 40 40" aria-hidden="true">
-          <circle cx="20" cy="20" r="19" fill="var(--sec)"/>
-          <path d="M20 7l8 13h-5l6 11H11l6-11h-5z" fill="#FFF4E0"/>
-          <circle cx="20" cy="7" r="3" fill="var(--acc)"/>
-          <circle cx="17" cy="24" r="1.6" fill="var(--acc)"/>
-          <circle cx="23" cy="19" r="1.4" fill="var(--acc)"/>
-        </svg>
-        <span>Noël <span class="logo-accent">sous les</span> Palmiers</span>
+      <a href="#" class="brand" aria-label="Noël sous les Palmiers, retour à l'accueil">
+        <div class="brand-icon" aria-hidden="true">
+          <svg class="svg-ico svg-ico-md" aria-hidden="true"><use href="#icon-tree"/></svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Noël <mark>sous les</mark> Palmiers</span>
+          <span class="brand-tagline">Artisanat béninois d'exception</span>
+        </div>
       </a>
 
+      <!-- Desktop Navigation Links -->
       <nav class="nav" aria-label="Navigation principale">
-        <a href="#/">Accueil</a>
-        <a href="#/boutique">La Boutique</a>
-        <a href="#artisans">Nos Artisans</a>
-        <a href="#avent">Calendrier de l'Avent</a>
-        <a href="#lettre">Lettre au Père Noël</a>
-        <a href="#faq">FAQ & Livraison</a>
+        <a href="#boutique" class="nav-link">La Boutique</a>
+        <a href="#artisans" class="nav-link">Nos Artisans</a>
+        <a href="#avent" class="nav-link">Calendrier de l'Avent</a>
+        <a href="#lettre" class="nav-link">Lettre de Vœux</a>
+        <a href="#temoignages" class="nav-link">Témoignages</a>
+        <a href="#faq" class="nav-link">Livraison &amp; FAQ</a>
       </nav>
 
-      <div class="hdr-actions">
-        <button class="cart-btn" data-open-cart aria-label="Ouvrir le panier d'achats">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M5 8h14l-1 13H6z"/>
-            <path d="M9 8V6a3 3 0 0 1 6 0v2"/>
+      <!-- Header Actions (Cart + Burger) -->
+      <div class="header-actions">
+        <!-- Cart Button -->
+        <button class="cart-toggle-btn" id="open-cart-btn" aria-label="Voir le panier d'achat, contient 0 article" aria-haspopup="dialog">
+          <svg class="svg-ico" aria-hidden="true"><use href="#icon-cart"/></svg>
+          <span class="cart-btn-label">Panier</span>
+          <span class="cart-badge" id="header-cart-badge" aria-live="polite">0</span>
+        </button>
+
+        <!-- Mobile Burger Button -->
+        <button class="burger-btn" id="burger-btn" aria-label="Ouvrir le menu de navigation sur mobile" aria-expanded="false" aria-controls="mobile-nav">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
           </svg>
-          <span class="cart-label">Panier</span>
-          <span class="cart-count">0</span>
         </button>
       </div>
     </div>
   </header>
 
-  <!-- ==================== MAIN VIEW CONTAINER ==================== -->
-  <main id="main">
-    
-    <!-- View 1: Home -->
-    <div data-view="home">
-      
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="wrap hero-in">
-          <div class="hero-txt rv">
-            <span class="eyebrow">🎄 Noël 2026 · Artisanat d'Art Béninois</span>
-            <h1>Un Noël qui a le goût et la chaleur du <span class="sun-highlight">soleil</span>.</h1>
-            <p class="lead">
-              Sapins en raphia naturel tressé, boules en wax revalorisé, crèches sculptées à Abomey. Une féerie tropicale, éco-responsable et chaleureuse, livrée sous votre toit avant le 24 décembre.
-            </p>
+  <!-- Mobile Navigation Off-Canvas Drawer -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Menu mobile" aria-hidden="true">
+    <div class="mobile-nav-panel">
+      <div class="mobile-nav-header">
+        <div class="brand">
+          <div class="brand-icon" aria-hidden="true">
+            <svg class="svg-ico"><use href="#icon-palm"/></svg>
+          </div>
+          <span class="brand-name">Noël sous les Palmiers</span>
+        </div>
+        <button class="mobile-nav-close" id="close-mobile-nav" aria-label="Fermer le menu mobile">&times;</button>
+      </div>
+      <div class="mobile-nav-links">
+        <a href="#boutique" class="mobile-nav-link">
+          <svg class="svg-ico" aria-hidden="true"><use href="#icon-tree"/></svg>
+          <span>La Boutique Festive</span>
+        </a>
+        <a href="#artisans" class="mobile-nav-link">
+          <svg class="svg-ico" aria-hidden="true"><use href="#icon-hands"/></svg>
+          <span>Nos Artisans &amp; Ateliers</span>
+        </a>
+        <a href="#avent" class="mobile-nav-link">
+          <svg class="svg-ico" aria-hidden="true"><use href="#icon-sparkle"/></svg>
+          <span>Calendrier de l'Avent (24 jours)</span>
+        </a>
+        <a href="#lettre" class="mobile-nav-link">
+          <svg class="svg-ico" aria-hidden="true"><use href="#icon-book"/></svg>
+          <span>Ma Lettre de Vœux</span>
+        </a>
+        <a href="#temoignages" class="mobile-nav-link">
+          <svg class="svg-ico" aria-hidden="true"><use href="#icon-star"/></svg>
+          <span>Témoignages &amp; Avis</span>
+        </a>
+        <a href="#faq" class="mobile-nav-link">
+          <svg class="svg-ico" aria-hidden="true"><use href="#icon-truck"/></svg>
+          <span>Guide Livraison &amp; MoMo</span>
+        </a>
+      </div>
+      <div class="mobile-nav-footer">
+        <button class="btn btn-primary btn-block" onclick="window.NSP.openCart(); document.getElementById('close-mobile-nav').click();">
+          <span>Ouvrir mon Panier</span>
+          <span class="cart-badge-inline" id="mobile-cart-badge">0</span>
+        </button>
+        <p class="mobile-nav-guarantee">Emballage kraft &amp; cauris protecteur offert pour chaque création</p>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Tropical Canvas Sparkles Container (Subtle festive stardust) -->
+  <canvas id="festive-canvas" aria-hidden="true"></canvas>
+
+  <main id="main-content">
+    <!-- Hero Section with Masterful Sensory Copywriting -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="hero-content reveal-on-scroll">
+            <div class="hero-kicker">
+              <svg class="svg-ico svg-ico-xs text-gold" aria-hidden="true"><use href="#icon-palm"/></svg>
+              <span class="kicker-text">Féerie Tropicale &amp; Éco-responsable · Cotonou</span>
+            </div>
             
-            <div class="hero-cta">
-              <a class="btn btn-acc" href="#/boutique">Décorer ma maison</a>
-              <a class="btn btn-ghost" href="#avent">Ouvrir le calendrier</a>
+            <h1 class="hero-title" id="hero-title">
+              Quand la magie de Noël s'éveille dans l'or <span class="typewriter-box"><span class="typewriter-dynamic" id="hero-typewriter" data-phrases='["du raphia béninois.", "de nos artisans de Ganvié.", "des étoffes wax de Cotonou.", "du teck d&apos;Abomey."]'>du raphia béninois.</span><span class="typewriter-cursor" aria-hidden="true">|</span></span>
+            </h1>
+            
+            <p class="hero-desc">
+              Oubliez le plastique sans âme. Faites souffler la brise bienfaisante de l'Harmattan dans votre salon avec nos <strong>sapins tressés à Ganvié</strong>, nos <strong>boules chatoyantes en wax revalorisé</strong> et nos <strong>crèches sculptées dans le teck d'Abomey</strong>. Un Noël chaleureux, durable et fier de ses racines.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#boutique" class="btn btn-primary btn-lg pulse-hover">
+                <span>Découvrir la collection 2026</span>
+                <svg class="svg-ico" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+              </a>
+              <a href="#artisans" class="btn btn-outline btn-lg">
+                <span>Rencontrer nos maîtres artisans</span>
+              </a>
             </div>
 
-            <div class="countdown-box">
-              <span class="cd-label" data-cd-label></span>
-              <div class="cd" data-cd></div>
-            </div>
-          </div>
-
-          <figure class="hero-fig rv">
-            <img src="img/hero.webp" alt="Salon lumineux décoré d'un sapin en raphia et de boules colorées en wax" width="800" height="600" fetchpriority="high">
-            <figcaption class="hero-caption">
-              <span><b>4,9/5</b> sur 1 216 foyers décorés avec amour</span>
-            </figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <!-- Quiz Assistant -->
-      <section class="quiz-section">
-        <div class="wrap">
-          <div class="quiz-card rv" id="quiz-box">
-            <div class="quiz-steps">
-              <span class="eyebrow">✨ Guide Express (30 secondes)</span>
-              <h2>Quelle ambiance rêvez-vous pour ce Noël ?</h2>
-              <p class="muted" style="margin:0;">Laissez-vous guider pour trouver la composition parfaite adaptée à votre foyer.</p>
-              
-              <div class="quiz-options">
-                <button class="quiz-btn" data-quiz-choice="famille">
-                  <b>👨‍👩‍👧‍👦 Fête en famille complète</b>
-                  <span>Un sapin prêt en 10 min et incassable</span>
-                </button>
-                <button class="quiz-btn" data-quiz-choice="moderne">
-                  <b>🌿 Épure & Naturel</b>
-                  <span>Raphia doré et lumières cauris douces</span>
-                </button>
-                <button class="quiz-btn" data-quiz-choice="cadeau">
-                  <b>🎁 Cadeau d'exception</b>
-                  <span>Pièce maîtresse en bois de teck noble</span>
-                </button>
+            <!-- Value Propositions & Reassurance -->
+            <div class="hero-guarantees" role="list">
+              <div class="guarantee-item" role="listitem">
+                <div class="guarantee-icon" aria-hidden="true">
+                  <svg class="svg-ico svg-ico-md"><use href="#icon-leaf"/></svg>
+                </div>
+                <div>
+                  <strong class="guarantee-title">100% Fibres Végétales &amp; Wax</strong>
+                  <span class="guarantee-sub">Raphia durable récolté en lagune, zéro déchet plastique</span>
+                </div>
               </div>
-            </div>
-
-            <div class="quiz-result" id="quiz-result"></div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Featured Grid -->
-      <section class="sec">
-        <div class="wrap">
-          <div class="sec-h rv">
-            <div>
-              <span class="eyebrow">Nos Créations Phares</span>
-              <h2>Pour un salon prêt en 10 minutes</h2>
-            </div>
-            <a class="btn btn-ghost btn-sm" href="#/boutique">Voir toute la boutique</a>
-          </div>
-          <div class="grid rv" id="featured-grid"></div>
-        </div>
-      </section>
-
-      <!-- Craftsmanship Section -->
-      <section class="craft-section" id="artisans">
-        <div class="wrap">
-          <div class="craft-grid">
-            <div class="rv">
-              <span class="eyebrow">Nos Ateliers au Bénin</span>
-              <h2>L'artisanat derrière la magie de Noël</h2>
-              <p class="lead" style="font-size:1.05rem;">
-                Chaque création de notre collection est le fruit d'un savoir-faire séculaire. Du tressage des fibres de raphia à Porto-Novo jusqu'à la taille du bois de teck sur le plateau d'Abomey, nous valorisons le travail de plus de 40 artisans passionnés.
-              </p>
-              <div class="craft-pillars">
-                <div class="pillar">
-                  <h4>🌿 100 % Durable</h4>
-                  <p>Matières végétales renouvelables et réutilisables chaque année sans fin.</p>
+              <div class="guarantee-item" role="listitem">
+                <div class="guarantee-icon" aria-hidden="true">
+                  <svg class="svg-ico svg-ico-md"><use href="#icon-hands"/></svg>
                 </div>
-                <div class="pillar">
-                  <h4>✂️ Wax Revalorisé</h4>
-                  <p>Chutes de pagnes rachetées auprès de couturières locales pour zéro déchet.</p>
+                <div>
+                  <strong class="guarantee-title">Artisanat Équitable Rémunéré +40%</strong>
+                  <span class="guarantee-sub">14 ateliers soutenus à Ganvié, Dantokpa &amp; Abomey</span>
                 </div>
-                <div class="pillar">
-                  <h4>🤝 Commerce Équitable</h4>
-                  <p>Rémunération juste garantissant la transmission des métiers d'art.</p>
+              </div>
+              <div class="guarantee-item" role="listitem">
+                <div class="guarantee-icon" aria-hidden="true">
+                  <svg class="svg-ico svg-ico-md"><use href="#icon-truck"/></svg>
                 </div>
-                <div class="pillar">
-                  <h4>📦 Finition d'Exception</h4>
-                  <p>Chaque pièce est contrôlée, cirée et emballée avec un soin rigoureux.</p>
+                <div>
+                  <strong class="guarantee-title">Livraison Garantie avant le 24 Déc.</strong>
+                  <span class="guarantee-sub">Expédition soignée à domicile partout au Bénin</span>
                 </div>
               </div>
             </div>
-            <div class="craft-img rv">
-              <img src="/src/assets/images/artisan_workshop_benin_1790705288095.jpg" alt="Artisans travaillant le raphia et le wax dans un atelier baigné de soleil" width="800" height="450" loading="lazy">
+          </div>
+
+          <!-- Hero Visual with Interactive Floating Tag -->
+          <div class="hero-visual reveal-on-scroll">
+            <div class="hero-img-box">
+              <img 
+                src="/img/hero.webp" 
+                alt="Pack Salon Féerique Noël sous les Palmiers avec sapin en raphia, boules wax et guirlande lumineuse cauris" 
+                width="640" 
+                height="640"
+                fetchpriority="high"
+                class="hero-img"
+              >
+              <div class="hero-sparkle-ring" aria-hidden="true"></div>
+            </div>
+            
+            <div class="hero-floating-card float-animation" onclick="window.NSP.openPDP('pack-sapin')" role="button" tabindex="0" aria-label="Voir le Pack Salon Féerique complet en promotion">
+              <div class="floating-badge-tag">Bestseller Réveillon</div>
+              <div class="floating-body">
+                <div class="floating-icon" aria-hidden="true">
+                  <svg class="svg-ico svg-ico-lg text-gold"><use href="#icon-sparkle"/></svg>
+                </div>
+                <div class="floating-text">
+                  <span class="floating-title">Pack Salon Féerique complet</span>
+                  <span class="floating-sub">Sapin 1,5m + 12 boules wax + guirlande cauris + étoile</span>
+                  <div class="floating-price">
+                    <strong>49 900 FCFA</strong>
+                    <del>58 600 FCFA</del>
+                    <span class="floating-save">-15% Économie</span>
+                  </div>
+                </div>
+              </div>
+              <span class="floating-hint">
+                <span>Voir les détails</span>
+                <svg class="svg-ico svg-ico-xs" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+              </span>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Advent Calendar -->
-      <section class="sec avent-sec" id="avent">
-        <div class="wrap">
-          <div class="sec-h rv" style="text-align:center; justify-content:center;">
-            <div>
-              <span class="eyebrow">Calendrier de l'Avent Tropical</span>
-              <h2>Une surprise chaque jour, du 1er au 24 décembre</h2>
-              <p class="muted" id="cal-note" style="margin:0.5rem 0 0;"></p>
+    <!-- Urgency Countdown & Express Delivery Bar -->
+    <section class="countdown-bar" aria-label="Compte à rebours avant la clôture des expéditions de Noël">
+      <div class="wrap">
+        <div class="cd-info">
+          <div class="cd-pulse-wrapper" aria-hidden="true">
+            <div class="cd-pulse-core"></div>
+            <div class="cd-pulse-wave"></div>
+          </div>
+          <div class="cd-text">
+            <h2 class="cd-heading">Expéditions Express de Noël en cours</h2>
+            <p class="cd-sub">Commandez avant le compte à rebours pour être livré sous le sapin pour le réveillon !</p>
+          </div>
+        </div>
+
+        <div class="cd-boxes" aria-label="Temps restant avant la clôture">
+          <div class="cd-box">
+            <div class="cd-num" id="cd-days">--</div>
+            <div class="cd-lbl">Jours</div>
+          </div>
+          <div class="cd-box">
+            <div class="cd-num" id="cd-hours">--</div>
+            <div class="cd-lbl">Heures</div>
+          </div>
+          <div class="cd-box">
+            <div class="cd-num" id="cd-minutes">--</div>
+            <div class="cd-lbl">Minutes</div>
+          </div>
+          <div class="cd-box">
+            <div class="cd-num" id="cd-seconds">--</div>
+            <div class="cd-lbl">Secondes</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boutique & Catalogue Section -->
+    <section id="boutique" class="shop-section" aria-labelledby="boutique-title">
+      <div class="wrap">
+        <header class="section-head reveal-on-scroll">
+          <span class="section-kicker">Édition Limitée 2026</span>
+          <h2 class="section-title" id="boutique-title">Nos Décorations <span class="typewriter-reveal" data-text="Artisanales Béninoises">Artisanales Béninoises</span></h2>
+          <p class="section-desc">
+            Chaque pièce est façonnée à la main avec amour dans nos ateliers de Cotonou, Ganvié et Abomey. Des créations durables conçues pour illuminer vos réveillons pendant des années.
+          </p>
+        </header>
+
+        <!-- Controls: Category Filter Tabs & Live Instant Search -->
+        <div class="shop-controls reveal-on-scroll" role="region" aria-label="Filtres et recherche du catalogue">
+          <div class="shop-filters-row">
+            <div class="category-tabs" role="tablist" aria-label="Filtrer par type de produit">
+              <button class="cat-btn active" data-cat="all" role="tab" aria-selected="true">Toute la collection</button>
+              <button class="cat-btn" data-cat="sapins" role="tab" aria-selected="false">Sapins en raphia</button>
+              <button class="cat-btn" data-cat="deco" role="tab" aria-selected="false">Boules Wax &amp; Lumières</button>
+              <button class="cat-btn" data-cat="creches" role="tab" aria-selected="false">Crèches en Teck</button>
+              <button class="cat-btn" data-cat="packs" role="tab" aria-selected="false">Packs Clé en Main</button>
+            </div>
+
+            <div class="shop-search-box">
+              <svg class="svg-ico search-ico" aria-hidden="true"><use href="#icon-search"/></svg>
+              <input 
+                type="search" 
+                id="shop-search-input" 
+                placeholder="Rechercher sapin, boules, crèche, cauris..." 
+                aria-label="Rechercher une décoration dans le catalogue"
+                autocomplete="off"
+              >
+              <button class="search-clear-btn" id="search-clear-btn" aria-label="Effacer la recherche" style="display:none;">&times;</button>
             </div>
           </div>
-          <div class="cal rv" id="cal"></div>
+          
+          <!-- Live results count for screen readers -->
+          <div class="shop-results-status" id="shop-results-status" aria-live="polite">
+            8 créations d'art disponibles pour le réveillon
+          </div>
         </div>
-      </section>
 
-      <!-- Santa Letter -->
-      <section class="sec" id="lettre">
-        <div class="wrap letter-wrap">
-          <div class="rv">
-            <span class="eyebrow">La Lettre Interactive</span>
-            <h2>Composez votre liste. Partagez-la sur WhatsApp.</h2>
-            <p class="muted">
-              Cochez vos envies déco, puis transmettez en 1 clic votre lettre personnalisée à votre proche ou Père Noël bienveillant. Tout est calculé instantanément.
+        <!-- Products Dynamic Grid -->
+        <div class="products-grid" id="products-grid" role="region" aria-label="Liste des produits">
+          <!-- Dynamically populated by app.js with high performance & semantic cards -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Artisans & Cultural Heritage Section -->
+    <section id="artisans" class="artisans-section" aria-labelledby="artisans-title">
+      <div class="wrap">
+        <header class="section-head reveal-on-scroll">
+          <span class="section-kicker">Racines &amp; Transmission</span>
+          <h2 class="section-title" id="artisans-title">Les Mains d'Or de nos <span class="typewriter-reveal" data-text="Artisans Béninois">Artisans Béninois</span></h2>
+          <p class="section-desc">
+            Derrière chaque tresse de raphia et chaque coupon de wax chatoyant se cachent des maîtres artisans héritiers d'un savoir-faire ancestral. Découvrez leurs visages et leurs histoires.
+          </p>
+        </header>
+
+        <div class="artisans-grid" role="list">
+          <!-- Artisan 1: Koffi (Ganvié) -->
+          <article class="artisan-card reveal-on-scroll" role="listitem">
+            <div class="artisan-img-wrap">
+              <img 
+                src="/img/sapin-raphia.webp" 
+                alt="Koffi tressant un sapin en raphia naturel sur les rives de Ganvié" 
+                loading="lazy" 
+                decoding="async"
+                width="400" 
+                height="320"
+              >
+              <div class="artisan-chip">Vannerie lacustre</div>
+            </div>
+            <div class="artisan-body">
+              <h3 class="artisan-name">Koffi A.</h3>
+              <div class="artisan-location">
+                <svg class="svg-ico svg-ico-xs"><use href="#icon-pin"/></svg>
+                <span>Cité lacustre de Ganvié</span>
+              </div>
+              <blockquote class="artisan-quote">
+                « Tresser le raphia demande le calme de l'eau. Pour ces sapins de Noël, nous sélectionnons les plus jeunes palmes séchées au soleil. La matière est souple, vivante, et traverse les décennies sans faiblir. »
+              </blockquote>
+              <div class="artisan-stats">
+                <span>
+                  <svg class="svg-ico svg-ico-xs"><use href="#icon-star"/></svg>
+                  18 ans d'expérience
+                </span>
+                <span>
+                  <svg class="svg-ico svg-ico-xs"><use href="#icon-leaf"/></svg>
+                  Raphia 100% végétal
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artisan 2: Akouavi (Dantokpa) -->
+          <article class="artisan-card reveal-on-scroll" role="listitem">
+            <div class="artisan-img-wrap">
+              <img 
+                src="/img/boules-wax.webp" 
+                alt="Akouavi sélectionnant des tissus wax chatoyants au marché Dantokpa" 
+                loading="lazy" 
+                decoding="async"
+                width="400" 
+                height="320"
+              >
+              <div class="artisan-chip">Création textile Zéro Déchet</div>
+            </div>
+            <div class="artisan-body">
+              <h3 class="artisan-name">Akouavi D.</h3>
+              <div class="artisan-location">
+                <svg class="svg-ico svg-ico-xs"><use href="#icon-pin"/></svg>
+                <span>Grand Marché Dantokpa, Cotonou</span>
+              </div>
+              <blockquote class="artisan-quote">
+                « Chez nous, les tailleurs ont de sublimes chutes de tissus après les fêtes. Plutôt que de les laisser se perdre, nous en faisons des boules de Noël étincelantes. Chaque ornement raconte la joie d'une fête béninoise. »
+              </blockquote>
+              <div class="artisan-stats">
+                <span>
+                  <svg class="svg-ico svg-ico-xs"><use href="#icon-recycle"/></svg>
+                  120 kg de chutes sauvées
+                </span>
+                <span>
+                  <svg class="svg-ico svg-ico-xs"><use href="#icon-sparkle"/></svg>
+                  Boules incassables
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Artisan 3: Dossou (Abomey) -->
+          <article class="artisan-card reveal-on-scroll" role="listitem">
+            <div class="artisan-img-wrap">
+              <img 
+                src="/img/creche.webp" 
+                alt="Dossou sculptant une figurine de la Nativité dans du teck à Abomey" 
+                loading="lazy" 
+                decoding="async"
+                width="400" 
+                height="320"
+              >
+              <div class="artisan-chip">Sculpture royale sur teck</div>
+            </div>
+            <div class="artisan-body">
+              <h3 class="artisan-name">Dossou G.</h3>
+              <div class="artisan-location">
+                <svg class="svg-ico svg-ico-xs"><use href="#icon-pin"/></svg>
+                <span>Royaume historique d'Abomey</span>
+              </div>
+              <blockquote class="artisan-quote">
+                « Le bois de teck respire l'histoire de nos rois. Sculpter la sainte famille avec nos traits et nos parures traditionnelles donne à la Nativité une résonance sacrée, profondément enracinée dans notre terre. »
+              </blockquote>
+              <div class="artisan-stats">
+                <span>
+                  <svg class="svg-ico svg-ico-xs"><use href="#icon-craft"/></svg>
+                  Bois noble certifié
+                </span>
+                <span>
+                  <svg class="svg-ico svg-ico-xs"><use href="#icon-leaf"/></svg>
+                  Finition cire d'abeille pure
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Ethical & Transparent Commitment Banner -->
+        <div class="craft-banner reveal-on-scroll">
+          <div class="craft-img-box">
+            <img 
+              src="/src/assets/images/artisan_workshop_benin_1790705288095.jpg" 
+              alt="Atelier d'artisans réunis à Cotonou travaillant sur les décorations de fête" 
+              loading="lazy" 
+              decoding="async"
+              width="600" 
+              height="400"
+            >
+            <div class="craft-overlay-tag">Atelier Solidaire de Cotonou</div>
+          </div>
+          <div class="craft-content">
+            <span class="craft-kicker">Notre engagement sincère</span>
+            <h3 class="craft-title">Une démarche éthique, transparente et profondément humaine</h3>
+            <p>
+              Chaque achat sur <strong>Noël sous les Palmiers</strong> bénéficie sans intermédiaire à <strong>14 familles d'artisans</strong>. Nous garantissons une rémunération supérieure de <strong>+40% aux standards du marché local</strong>, un environnement de travail digne et le financement de l'apprentissage pour les jeunes vanneuses et sculpteurs.
+            </p>
+            <div class="craft-points">
+              <div class="craft-point">
+                <strong>
+                  <svg class="svg-ico svg-ico-xs"><use href="#icon-leaf"/></svg>
+                  Fibres 100% de la vallée de l'Ouémé
+                </strong>
+                <span>Récoltées de manière respectueuse pour préserver le biotope lagunaire.</span>
+              </div>
+              <div class="craft-point">
+                <strong>
+                  <svg class="svg-ico svg-ico-xs"><use href="#icon-shield"/></svg>
+                  Cauris protecteurs traditionnels
+                </strong>
+                <span>Symbole béninois de bienveillance, de santé et d'abondance pour votre foyer.</span>
+              </div>
+            </div>
+            <div class="craft-cta-box">
+              <a href="#boutique" class="btn btn-primary">
+                <span>Commander et soutenir nos créateurs</span>
+                <svg class="svg-ico svg-ico-xs" aria-hidden="true"><use href="#icon-arrow-right"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Advent Calendar Section -->
+    <section id="avent" class="advent-section" aria-labelledby="avent-title">
+      <div class="wrap">
+        <header class="section-head reveal-on-scroll">
+          <span class="section-kicker">Du 1er au 24 Décembre</span>
+          <h2 class="section-title" id="avent-title">Le Calendrier de l'Avent <span class="typewriter-reveal" data-text="Tropical Interactif">Tropical Interactif</span></h2>
+          <p class="section-desc">
+            Chaque jour avant Noël, ouvrez une case pour dévoiler des <strong>contes béninois</strong>, des <strong>codes promotionnels secrets</strong>, des <strong>recettes festives</strong> et des astuces pour enchanter votre maison.
+          </p>
+        </header>
+
+        <!-- Progress status -->
+        <div class="advent-progress-bar-wrapper reveal-on-scroll">
+          <div class="advent-progress-info">
+            <span>
+              <svg class="svg-ico svg-ico-xs text-gold"><use href="#icon-sparkle"/></svg>
+              Vos surprises débloquées : <strong id="advent-unlocked-count">0 / 24</strong>
+            </span>
+            <span class="advent-hint">Les codes promo découverts s'ajoutent directement à votre panier</span>
+          </div>
+          <div class="advent-meter-bg">
+            <div class="advent-meter-fill" id="advent-meter-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- 24 Interactive Doors Grid -->
+        <div class="advent-grid" id="advent-grid" role="region" aria-label="Cases du calendrier de l'Avent">
+          <!-- Dynamically populated by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Santa Letter Generator & Wishlist Section -->
+    <section id="lettre" class="letter-section" aria-labelledby="lettre-title">
+      <div class="wrap">
+        <header class="section-head reveal-on-scroll">
+          <span class="section-kicker">Magie &amp; Partage</span>
+          <h2 class="section-title" id="lettre-title">Ma Lettre de Vœux <span class="typewriter-reveal" data-text="sous les Palmiers">sous les Palmiers</span></h2>
+          <p class="section-desc">
+            Composez votre liste de souhaits artisanale, écrivez vos vœux les plus doux et partagez instantanément votre lettre à vos proches par WhatsApp pour qu'ils sachent exactement quoi déposer sous votre sapin !
+          </p>
+        </header>
+
+        <div class="letter-card reveal-on-scroll">
+          <div class="letter-header">
+            <div class="letter-stamp" aria-hidden="true">
+              <svg class="svg-ico svg-ico-sm text-accent"><use href="#icon-tree"/></svg>
+              <span>POSTE DU BÉNIN</span>
+              <strong>SPÉCIALE NOËL</strong>
+              <span>2026</span>
+            </div>
+            <h3 class="letter-greeting">Mes Chers Vœux sous les Palmiers</h3>
+            <p class="letter-intro">
+              Cette année, j'ai choisi de célébrer les fêtes avec le cœur, au rythme de notre belle terre béninoise...
             </p>
           </div>
 
-          <form class="letter rv" id="letter-form" onsubmit="return false">
-            <div class="l-row">
-              <label>
-                Votre prénom
-                <input id="letter-sender" placeholder="Ex. Divine" autocomplete="given-name">
-              </label>
-              <label>
-                Destinataire (votre Père Noël)
-                <input id="letter-receiver" placeholder="Ex. Tonton Marcel">
-              </label>
+          <div class="letter-form-row">
+            <div class="form-group">
+              <label for="santa-sender-name">Mon prénom ou signature :</label>
+              <input 
+                type="text" 
+                id="santa-sender-name" 
+                class="form-control" 
+                placeholder="Ex: Aïcha, Marc, Maman..." 
+                oninput="window.NSP.updateSantaLetterPreview()"
+              >
+            </div>
+            <div class="form-group">
+              <label for="santa-recipient">Destinataire de mes vœux :</label>
+              <select id="santa-recipient" class="form-control" onchange="window.NSP.updateSantaLetterPreview()">
+                <option value="Père Noël sous les Palmiers">Au Père Noël sous les Palmiers</option>
+                <option value="mes chers parents">À mes chers parents adorés</option>
+                <option value="mon amour">À mon amour de toujours</option>
+                <option value="mes enfants chéris">À mes enfants chéris</option>
+                <option value="toute la grande famille">À toute notre grande famille</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="wishes-picker-header">
+            <label class="wishes-picker-title">Sélectionnez vos décorations coup de cœur :</label>
+            <span class="wishes-picker-sub">Cochez les créations pour mettre à jour automatiquement votre lettre et budget</span>
+          </div>
+
+          <div class="wishes-checklist" id="santa-wishes-checklist" role="group" aria-label="Sélection des produits pour la lettre de Noël">
+            <!-- Dynamically populated by app.js -->
+          </div>
+
+          <div class="form-group" style="margin-top: 1.5rem;">
+            <label for="santa-custom-note">Mon message personnel :</label>
+            <input 
+              type="text" 
+              id="santa-custom-note" 
+              class="form-control" 
+              placeholder="Ex: J'ai hâte de réunir toute notre famille autour d'un salon chaleureux !" 
+              oninput="window.NSP.updateSantaLetterPreview()"
+            >
+          </div>
+
+          <!-- Interactive Realistic Letter Parchment Preview -->
+          <div class="letter-parchment">
+            <div class="parchment-watermark" aria-hidden="true">
+              <svg class="svg-ico"><use href="#icon-tree"/></svg>
+            </div>
+            <div class="letter-preview" id="santa-preview-text" aria-live="polite">
+              <i>Cochez vos créations coup de cœur ci-dessus pour composer votre lettre...</i>
+            </div>
+          </div>
+
+          <!-- Bottom Actions & Estimated Total -->
+          <div class="letter-actions">
+            <div class="letter-total-box">
+              <span class="letter-total-label">Budget estimé des souhaits :</span>
+              <strong class="letter-total-value" id="santa-estimated-total">0 FCFA</strong>
             </div>
 
-            <div class="wishes" id="wishes-container"></div>
+            <div class="letter-btns-group">
+              <button class="btn btn-outline btn-md" onclick="window.NSP.addSantaWishesToCart()">
+                <span>Mettre ma liste au panier</span>
+                <svg class="svg-ico svg-ico-xs"><use href="#icon-cart"/></svg>
+              </button>
+              <a href="#" id="santa-share-whatsapp" target="_blank" rel="noopener" class="btn btn-whatsapp btn-md pulse-hover">
+                <svg class="svg-ico svg-ico-sm" aria-hidden="true"><use href="#icon-send"/></svg>
+                <span>Envoyer ma lettre par WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="l-foot">
-              <span>Total de la sélection : <b id="letter-total" style="color:var(--sec-dark); font-size:1.15rem;">0 F CFA</b></span>
-              <div class="l-btns">
-                <a class="btn btn-wa" id="letter-wa-btn" target="_blank" rel="noopener" href="#">
-                  Envoyer sur WhatsApp
-                </a>
-                <button class="btn btn-ghost" id="letter-add-all-btn" type="button">
-                  Tout ajouter au panier
-                </button>
+    <!-- Social Proof & Customer Stories Section -->
+    <section id="temoignages" class="testimonials-section" aria-labelledby="temoignages-title">
+      <div class="wrap">
+        <header class="section-head reveal-on-scroll">
+          <span class="section-kicker">Échos de nos Foyers</span>
+          <h2 class="section-title" id="temoignages-title">La Joie de nos Clients à Cotonou et dans le Monde</h2>
+          <p class="section-desc">
+            Plus de 450 familles fêtent déjà Noël avec nos créations artisanales. Voici leurs témoignages.
+          </p>
+        </header>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal-on-scroll">
+            <div class="testi-stars" aria-label="Note de 5 sur 5">
+              <svg class="svg-star"><use href="#icon-star"/></svg>
+              <svg class="svg-star"><use href="#icon-star"/></svg>
+              <svg class="svg-star"><use href="#icon-star"/></svg>
+              <svg class="svg-star"><use href="#icon-star"/></svg>
+              <svg class="svg-star"><use href="#icon-star"/></svg>
+            </div>
+            <p class="testi-text">
+              « Le sapin en raphia de 1,50m est une pure merveille. Les enfants étaient émerveillés ! Zéro épine sur le carrelage et une odeur naturelle apaisante. On le réutilise pour la 2ème année consécutive, il n'a pas bougé d'un millimètre. »
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">FG</div>
+              <div>
+                <strong>Félicité G.</strong>
+                <span>Cotonou, Quartier Haie Vive · Commande Pack Salon</span>
               </div>
             </div>
-          </form>
-        </div>
-      </section>
+          </div>
 
-      <!-- Delivery Section -->
-      <section class="sec" id="livraison">
-        <div class="wrap">
-          <div class="sec-h rv">
-            <div>
-              <span class="eyebrow">Logistique & Sérénité</span>
-              <h2>Les engagements de livraison pour vos fêtes</h2>
+          <div class="testimonial-card reveal-on-scroll">
+            <div class="testi-stars" aria-label="Note de 5 sur 5">
+              <svg class="svg-star"><use href="#icon-star"/></svg>
+              <svg class="svg-star"><use href="#icon-star"/></svg>
+              <svg class="svg-star"><use href="#icon-star"/></svg>
+              <svg class="svg-star"><use href="#icon-star"/></svg>
+              <svg class="svg-star"><use href="#icon-star"/></svg>
+            </div>
+            <p class="testi-text">
+              « J'habite à Paris mais je voulais offrir un Noël inoubliable à mes parents restés à Calavi. Commande passée sur WhatsApp un mercredi, livrée le jeudi après-midi en mains propres avec MTN MoMo. Le service client est d'une gentillesse rare ! »
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">YM</div>
+              <div>
+                <strong>Yannick M.</strong>
+                <span>Paris / Calavi · Client Diaspora</span>
+              </div>
             </div>
           </div>
-          <div class="deliv-grid rv">
-            <div class="deliv-card highlight">
-              <b>20 déc.</b>
-              <strong>Dernier jour garanti partout</strong>
-              <p class="muted" style="font-size:0.9rem; margin-top:0.4rem;">Pour être certain de recevoir votre sapin avant le réveillon partout au Bénin, Togo et Côte d'Ivoire.</p>
+
+          <div class="testimonial-card reveal-on-scroll">
+            <div class="testi-stars" aria-label="Note de 5 sur 5">
+              <svg class="svg-star"><use href="#icon-star"/></svg>
+              <svg class="svg-star"><use href="#icon-star"/></svg>
+              <svg class="svg-star"><use href="#icon-star"/></svg>
+              <svg class="svg-star"><use href="#icon-star"/></svg>
+              <svg class="svg-star"><use href="#icon-star"/></svg>
             </div>
-            <div class="deliv-card">
-              <b>23 déc.</b>
-              <strong>Livraison Express 24h</strong>
-              <p class="muted" style="font-size:0.9rem; margin-top:0.4rem;">Service prioritaire à Cotonou et Calavi pour toute commande passée avant 12h.</p>
-            </div>
-            <div class="deliv-card">
-              <b>10 janv.</b>
-              <strong>Retours prolongés</strong>
-              <p class="muted" style="font-size:0.9rem; margin-top:0.4rem;">Offrez l'esprit 100 % tranquille : échange ou remboursement sans complication après les fêtes.</p>
+            <p class="testi-text">
+              « Les boules en wax sont juste sublimes et surtout incassables avec mes deux chats qui sautent partout ! Et la crèche sculptée en teck a une âme que l'on ne trouve nulle part dans les grands magasins. Fière de nos artisans. »
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">SA</div>
+              <div>
+                <strong>Sophie &amp; Armand A.</strong>
+                <span>Porto-Novo · Commande Crèche &amp; Boules Wax</span>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Reviews Section -->
-      <section class="sec">
-        <div class="wrap">
-          <div class="sec-h rv">
-            <div>
-              <span class="eyebrow">Témoignages & Avis Vérifiés</span>
-              <h2>Leur Noël sous les palmiers</h2>
-            </div>
-          </div>
-          <div class="reviews-grid rv" id="reviews-container"></div>
-        </div>
-      </section>
-
-      <!-- FAQ Section -->
-      <section class="sec" id="faq">
-        <div class="wrap faq-wrap">
-          <div class="sec-h rv" style="text-align:center; justify-content:center;">
-            <div>
-              <span class="eyebrow">Questions Fréquentes</span>
-              <h2>Tout ce que vous devez savoir</h2>
-            </div>
-          </div>
-          <div class="rv" id="faq-container"></div>
-        </div>
-      </section>
-
-    </div>
-
-    <!-- View 2: Shop -->
-    <div data-view="shop" hidden>
-      <section class="shop-hero">
-        <div class="wrap">
-          <nav class="crumbs" aria-label="Fil d'Ariane">
-            <a href="#/">Accueil</a> / <span aria-current="page">Boutique</span>
-          </nav>
-          <h1>La Déco de Noël Tropicale</h1>
-          <p class="muted" style="max-width:65ch;">
-            Chaque création est confectionnée à la main par nos artisans à Porto-Novo, Abomey et Cotonou avec des matériaux nobles et durables.
+    <!-- FAQ & Delivery Guide Section -->
+    <section id="faq" class="faq-section" aria-labelledby="faq-title">
+      <div class="wrap">
+        <header class="section-head reveal-on-scroll">
+          <span class="section-kicker">Transparence &amp; Sérénité</span>
+          <h2 class="section-title" id="faq-title">Tout Savoir sur la Livraison &amp; les Paiements</h2>
+          <p class="section-desc">
+            Des réponses claires pour commander l'esprit tranquille et vivre un réveillon sans aucun imprévu.
           </p>
-        </div>
-      </section>
+        </header>
 
-      <section class="wrap" style="padding-bottom:5rem;">
-        <div class="toolbar">
-          <div class="chips" id="chips" role="group" aria-label="Filtrer par catégorie"></div>
-          
-          <div style="display:flex; gap:0.9rem; align-items:center; flex-wrap:wrap;">
-            <input type="search" id="shop-search" placeholder="Rechercher une création..." style="border:1.5px solid var(--line-strong); border-radius:var(--radius-pill); padding:0.5rem 1rem; font-size:0.88rem; background:#fff;">
-            <span id="shop-count" class="muted" style="font-size:0.9rem; font-weight:700;"></span>
-            <label class="sr" for="sort">Trier</label>
-            <select id="sort" class="select-box">
-              <option value="pop">Les plus populaires</option>
-              <option value="disc">Meilleures remises</option>
-              <option value="asc">Prix : croissant</option>
-              <option value="desc">Prix : décroissant</option>
-            </select>
+        <div class="faq-grid">
+          <div class="faq-item reveal-on-scroll">
+            <h3 class="faq-q">
+              <svg class="svg-ico svg-ico-sm text-gold"><use href="#icon-truck"/></svg>
+              Quels sont les délais de livraison pour le réveillon ?
+            </h3>
+            <p class="faq-a">
+              À <strong>Cotonou et Abomey-Calavi</strong>, la livraison est effectuée en <strong>24h à 48h</strong> par nos coursiers attitrés. Pour <strong>Porto-Novo, Ouidah, Parakou et le reste du Bénin</strong>, l'envoi express sécurisé prend 48h à 72h. Toute commande validée avant le <strong>20 décembre à 23h59</strong> est garantie sous votre sapin pour le réveillon.
+            </p>
+          </div>
+
+          <div class="faq-item reveal-on-scroll">
+            <h3 class="faq-q">
+              <svg class="svg-ico svg-ico-sm text-gold"><use href="#icon-card"/></svg>
+              Quels sont les modes de paiement disponibles ?
+            </h3>
+            <p class="faq-a">
+              Pour votre sérénité maximale, nous proposons :
+              <br>• <strong>Paiement Mobile Money</strong> sécurisé : <strong>MTN MoMo, Moov Money et Wave</strong>.
+              <br>• <strong>Règlement en espèces à la livraison</strong> directement entre les mains de notre coursier à réception de votre colis.
+            </p>
+          </div>
+
+          <div class="faq-item reveal-on-scroll">
+            <h3 class="faq-q">
+              <svg class="svg-ico svg-ico-sm text-gold"><use href="#icon-leaf"/></svg>
+              Comment conserver mon sapin et mes décorations ?
+            </h3>
+            <p class="faq-a">
+              Nos sapins en raphia sont pliables sur leur pied en teck massif. Après les fêtes, repliez doucement les branches contre le tronc et rangez-le dans le grand pochon en toile fourni à l'abri de la poussière. Il conservera tout son éclat pour les 5 prochaines années !
+            </p>
+          </div>
+
+          <div class="faq-item reveal-on-scroll">
+            <h3 class="faq-q">
+              <svg class="svg-ico svg-ico-sm text-gold"><use href="#icon-gift"/></svg>
+              Les articles sont-ils prêts à offrir ?
+            </h3>
+            <p class="faq-a">
+              Oui absolument ! Chaque commande est emballée dans du <strong>papier kraft naturel recyclé</strong>, noué avec un fin ruban de raphia naturel et orné d'un <strong>authentique coquillage cauris protecteur</strong>. Une carte de vœux manuscrite est jointe gratuitement.
+            </p>
           </div>
         </div>
-
-        <div class="grid" id="shop-grid"></div>
-      </section>
-    </div>
-
-    <!-- View 3: Product Detail -->
-    <div data-view="product" hidden></div>
-
+      </div>
+    </section>
   </main>
 
-  <!-- Slide-over Cart Drawer -->
-  <div class="overlay" data-close></div>
-  <aside class="drawer" aria-hidden="true" aria-label="Panier d'achats" role="dialog">
-    <div class="drawer-h">
-      <h2>Votre panier</h2>
-      <button class="x-btn" data-close aria-label="Fermer le panier">×</button>
-    </div>
-    <div class="drawer-b"></div>
-    <div class="drawer-f"></div>
-  </aside>
-
-  <!-- Floating WhatsApp Contact Button -->
-  <a class="wa-float" href="https://wa.me/?text=Noël%20sous%20les%20Palmiers%20-%20bonjour%2C%20j%27ai%20une%20question%20sur%20vos%20d%C3%A9corations" target="_blank" rel="noopener" aria-label="Nous poser une question sur WhatsApp">
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.3-1.7-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.5.1 1.1.5 2.1 1.2 3 1.2 1.8 2.8 3.2 4.7 4 .5.2 1 .4 1.6.5.6.2 1.2.2 1.8.1.7-.1 1.4-.6 1.8-1.2.2-.4.2-.9.1-1.3z"/>
-    </svg>
-  </a>
-
-  <!-- Toast Element -->
-  <div class="toast" role="status" aria-live="polite"></div>
-
-  <!-- Footer -->
-  <footer class="ftr">
+  <!-- Global Footer with Rich Details -->
+  <footer class="footer" role="contentinfo">
     <div class="wrap">
-      <div class="ftr-grid">
-        <div>
-          <a class="logo" href="#/">
-            <svg viewBox="0 0 40 40" aria-hidden="true">
-              <circle cx="20" cy="20" r="19" fill="var(--sec)"/>
-              <path d="M20 7l8 13h-5l6 11H11l6-11h-5z" fill="#FFF4E0"/>
-              <circle cx="20" cy="7" r="3" fill="var(--acc)"/>
-            </svg>
-            <span>Noël <span class="logo-accent">sous les</span> Palmiers</span>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-icon" aria-hidden="true">
+              <svg class="svg-ico svg-ico-md"><use href="#icon-tree"/></svg>
+            </div>
+            <span class="brand-name" style="color:#FFF8F0;">Noël sous les Palmiers</span>
+          </div>
+          <p class="footer-mission">
+            L'élégance de l'artisanat béninois au service de vos plus beaux souvenirs de Noël. Raphia sauvage de lagune, cires wax sélectionnées à Dantokpa et teck noble sculpté avec dignité à Abomey.
+          </p>
+          <div class="footer-trust-chips">
+            <span>
+              <svg class="svg-ico svg-ico-xs"><use href="#icon-hands"/></svg>
+              100% Fait Main
+            </span>
+            <span>
+              <svg class="svg-ico svg-ico-xs"><use href="#icon-leaf"/></svg>
+              Éco-responsable
+            </span>
+            <span>
+              <svg class="svg-ico svg-ico-xs"><use href="#icon-shield"/></svg>
+              Origine Bénin
+            </span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">La Boutique</h4>
+          <ul>
+            <li><a href="#boutique">Packs Salon Féerique</a></li>
+            <li><a href="#boutique">Sapins en Raphia pliables</a></li>
+            <li><a href="#boutique">Boules de Noël en Wax</a></li>
+            <li><a href="#boutique">Crèches en Teck d'Abomey</a></li>
+            <li><a href="#boutique">Guirlandes LED &amp; Cauris</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Fêtes &amp; Traditions</h4>
+          <ul>
+            <li><a href="#artisans">Nos 14 Maîtres Artisans</a></li>
+            <li><a href="#avent">Calendrier de l'Avent (24 jours)</a></li>
+            <li><a href="#lettre">Générateur de Lettre de Vœux</a></li>
+            <li><a href="#temoignages">Avis des Familles de Cotonou</a></li>
+            <li><a href="#faq">Modalités d'Expédition Express</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-col-title">Service Client &amp; WhatsApp</h4>
+          <p class="footer-help-text">
+            Besoin d'un conseil ou d'une personnalisation pour votre entreprise ou hôtel ?
+          </p>
+          <a href="https://wa.me/22997000000?text=Bonjour%20No%C3%ABl%20sous%20les%20Palmiers%20!%20J'aimerais%20des%20informations%20sur%20vos%20d%C3%A9corations" target="_blank" rel="noopener" class="footer-whatsapp-link">
+            <svg class="svg-ico svg-ico-sm" aria-hidden="true"><use href="#icon-send"/></svg>
+            <span>Assistance WhatsApp 7j/7</span>
           </a>
-          <p class="muted" style="margin-top:1rem; max-width:36ch; font-size:0.9rem;">
-            Une collection féerique fabriquée à la main au Bénin en raphia, wax et teck noble. Parce que Noël aussi peut sentir la brise marine et le soleil.
-          </p>
-        </div>
-
-        <div>
-          <h4>Boutique</h4>
-          <ul>
-            <li><a href="#/boutique/sapins">Sapins en raphia</a></li>
-            <li><a href="#/boutique/deco">Ornements & Cauris</a></li>
-            <li><a href="#/boutique/creches">Crèches sculptées</a></li>
-            <li><a href="#/boutique/packs">Packs clé en main</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Aide & Commandes</h4>
-          <ul>
-            <li><a href="#faq">Foire aux questions</a></li>
-            <li><a href="#livraison">Délais de livraison</a></li>
-            <li><a href="#lettre">Créer ma lettre au Père Noël</a></li>
-            <li><a href="https://wa.me/?text=Noel%20sous%20les%20palmiers" target="_blank" rel="noopener">Assistance WhatsApp</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4>Surprise du Jour</h4>
-          <p class="muted" style="font-size:0.85rem;">
-            Recevez la surprise quotidienne du calendrier de l'Avent chaque matin dans votre boîte mail.
-          </p>
-          <form class="news-form" onsubmit="event.preventDefault(); window.SITE && alert && (event.target.reset(), document.querySelector('.toast')?.classList.add('show'), document.querySelector('.toast') && (document.querySelector('.toast').textContent = 'Merci ! Votre code du jour arrive par e-mail.'));">
-            <label class="sr" for="nl-email">Votre adresse e-mail</label>
-            <input id="nl-email" type="email" placeholder="votre@email.com" required>
-            <button class="btn btn-acc btn-sm" type="submit">OK</button>
-          </form>
+          <div class="footer-momo-badge">
+            <svg class="svg-ico svg-ico-xs"><use href="#icon-shield"/></svg>
+            <span>Paiement MoMo · Moov · Wave</span>
+          </div>
         </div>
       </div>
 
-      <div class="ftr-b">
-        <span>© 2026 Noël sous les Palmiers · Cotonou, Bénin. Marque fictive – Site de démonstration e-commerce.</span>
-        <span>Prix en FCFA TTC · Mobile Money (MTN MoMo, Moov, Wave) & Paiement à la livraison</span>
+      <div class="footer-bottom">
+        <div>
+          © 2026 Noël sous les Palmiers · Cotonou, République du Bénin. Tous droits réservés.
+        </div>
+        <div>
+          Conçu avec ferveur artisanale · Livraison Cotonou, Calavi, Porto-Novo, Parakou.
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- ==================== CLIENT SCRIPT ==================== -->
-  <script>
-    window.SITE = {
-      key: 'nsp',
-      brand: 'Noël sous les Palmiers',
-      tagline: 'Décoration de Noël artisanale en raphia, wax et bois · Cotonou',
-      lowStock: 5,
-      freeShip: 25000,
-      shipFee: 1500,
-      event: {
-        start: '2026-12-01T00:00:00+01:00',
-        deliveryCutoff: '2026-12-20T23:59:59+01:00',
-        end: '2026-12-24T23:59:59+01:00',
-        labels: {
-          before: "Le calendrier de l'Avent s'ouvre dans",
-          live: 'Livraison garantie avant Noël : commandez dans',
-          express: 'Livraison express Cotonou & Calavi encore possible',
-          after: 'Joyeux Noël à tous nos foyers sous les palmiers !'
-        }
-      },
-      demoTime: {
-        before: '2026-11-25T12:00:00+01:00',
-        live: '2026-12-15T09:00:00+01:00',
-        after: '2026-12-22T10:00:00+01:00'
-      },
-      codes: { PALMIER10: 10, AVENT15: 15, SOLEIL5: 5 },
-      delivery: 'Commandez avant le <b>20 décembre</b> : livraison garantie avant Noël partout au Bénin.',
-      deliveryLong: 'Cotonou, Calavi, Porto-Novo : 24 à 48 h (1 500 FCFA, <b>offerte dès 25 000 FCFA</b>). Parakou, Bohicon, Natitingou, Lomé, Abidjan : 48 à 72 h. Commande avant le 20 décembre = sous le sapin le 24. Retours prolongés jusqu\'au 10 janvier 2027.',
-      returns: 'Retours et échanges prolongés jusqu\'au 10 janvier 2027',
-      ctaCard: 'Ajouter',
-      ctaPdp: 'Ajouter au panier',
-      ctaSticky: 'Ajouter au panier',
-      ctaCheckout: 'Valider ma commande',
-      crossTitle: 'Pour compléter votre décoration',
-      emptyCart: 'Votre panier attend ses trésors tropicaux.',
-      priceNote: 'Chaque pièce est façonnée à la main : de légères variations de teintes et de tissage rendent chaque création unique.',
-      cats: [
-        ['all', 'Toute la collection'],
-        ['sapins', 'Sapins artisanaux'],
-        ['deco', 'Décorations & Étoiles'],
-        ['creches', 'Crèches sculptées'],
-        ['packs', 'Packs complets']
-      ],
-      products: [
-        {
-          id: 'pack-sapin',
-          name: 'Pack Sapin complet',
-          cat: 'packs',
-          catLabel: 'Pack clé en main',
-          price: 49900,
-          was: 58600,
-          img: 'img/hero.webp',
-          combo: ['sapin-raphia', 'boules-wax', 'guirlande', 'etoile'],
-          rating: 4.9,
-          reviews: 88,
-          stock: 6,
-          badge: '-15 % Économie',
-          short: 'Le sapin en raphia 1,5 m, 12 boules en wax assorties, la guirlande cauris LED et l\'étoile de cime. Tout pour un sapin monté en 10 minutes.',
-          details: [
-            'Sapin raphia 1,5 m pliable avec pied stable',
-            '12 boules en chutes de wax revalorisées (incassables)',
-            'Guirlande 5 m LED blanc chaud ornées de véritables cauris',
-            'Étoile de cime sculptée en calebasse pyrogravée',
-            'Économisez 8 700 FCFA par rapport aux articles achetés séparément'
-          ],
-          cross: ['creche', 'couronne', 'chemin-table']
-        },
-        {
-          id: 'sapin-raphia',
-          name: 'Sapin en raphia tressé',
-          cat: 'sapins',
-          catLabel: 'Sapin d\'art',
-          price: 34900,
-          was: 39900,
-          img: 'img/sapin-raphia.webp',
-          rating: 4.9,
-          reviews: 214,
-          stock: 7,
-          badge: 'Coup de cœur',
-          options: {
-            label: 'Hauteur du sapin',
-            values: ['1,2 m (26 900 F)', '1,5 m (34 900 F)', '1,8 m (44 900 F)'],
-            prices: [26900, 34900, 44900],
-            def: 1
-          },
-          short: 'Tressé à la main par nos artisans à Porto-Novo. Pliable à plat, robuste, réutilisable chaque année : zéro épine au sol.',
-          details: [
-            'Raphia naturel de l\'Ouémé et armature en bambou souple',
-            'Se replie totalement à plat en 15 secondes pour le rangement',
-            'Livré avec socle en bois de teck équilibré',
-            'Temps de tressage : 3 jours entiers par pièce',
-            'Écologique, durable et 100 % biodégradable'
-          ],
-          cross: ['boules-wax', 'guirlande', 'etoile']
-        },
-        {
-          id: 'boules-wax',
-          name: 'Boules en wax (lot de 12)',
-          cat: 'deco',
-          catLabel: 'Ornements',
-          price: 9900,
-          img: 'img/boules-wax.webp',
-          rating: 4.8,
-          reviews: 388,
-          stock: 30,
-          badge: 'Zéro déchet',
-          short: '12 boules festives légères confectionnées à partir de chutes de wax sélectionnées. Incassables : idéales avec enfants et animaux.',
-          details: [
-            'Lot de 12 boules aux motifs wax variés et vibrants',
-            'Structure ultra-légère et incassable',
-            'Attaches en ficelle de jute naturelle pré-installées',
-            'Confectionnées par un atelier solidaire de couturières à Cotonou'
-          ],
-          cross: ['sapin-raphia', 'guirlande', 'etoile']
-        },
-        {
-          id: 'guirlande',
-          name: 'Guirlande lumineuse cauris LED',
-          cat: 'deco',
-          catLabel: 'Lumières',
-          price: 7900,
-          img: 'img/guirlande.webp',
-          rating: 4.7,
-          reviews: 256,
-          stock: 22,
-          short: '5 mètres de micro-LED blanc chaud ornées de cauris naturels polis. Double alimentation piles & câble USB pour briller même en cas de coupure.',
-          details: [
-            '50 LED blanc chaud basse consommation à lumière douce',
-            'Cauris naturels récoltés sur la côte ouest-africaine',
-            'Fonctionne avec 3 piles AA ou directement branché sur port USB / Powerbank',
-            'Fil de cuivre discret et modulable'
-          ],
-          cross: ['sapin-raphia', 'boules-wax', 'couronne']
-        },
-        {
-          id: 'etoile',
-          name: 'Étoile de cime en calebasse',
-          cat: 'deco',
-          catLabel: 'Cime de sapin',
-          price: 5900,
-          img: 'img/etoile.webp',
-          rating: 4.8,
-          reviews: 141,
-          stock: 18,
-          short: 'Sculptée et délicatement pyrogravée dans une calebasse séchée naturelle. La touche finale authentique qui sublime la cime de votre sapin.',
-          details: [
-            'Calebasse naturelle séchée et durcie',
-            'Motifs traditionnels béninois pyrogravés à la pointe chaude',
-            'Système de fixation universel pour branche de cime',
-            'Diamètre : 22 cm environ'
-          ],
-          cross: ['sapin-raphia', 'boules-wax', 'guirlande']
-        },
-        {
-          id: 'creche',
-          name: 'Crèche en bois sculpté d\'Abomey',
-          cat: 'creches',
-          catLabel: 'Pièce maîtresse',
-          price: 24900,
-          img: 'img/creche.webp',
-          rating: 4.9,
-          reviews: 97,
-          stock: 4,
-          badge: 'Édition limitée',
-          short: '11 personnages sculptés à la main à Abomey dans du bois de teck noble. Une œuvre d\'art patrimoniale que l\'on transmet de génération en génération.',
-          details: [
-            '11 figurines complètes (Sainte Famille, Rois Mages, bergers, animaux)',
-            'Bois de teck massif ciré à la cire d\'abeille naturelle',
-            'Hauteur des personnages : 8 à 14 cm',
-            'Livrée dans son pochon en toile de jute protecteur'
-          ],
-          cross: ['guirlande', 'couronne', 'etoile']
-        },
-        {
-          id: 'couronne',
-          name: 'Couronne de porte palmes & wax',
-          cat: 'deco',
-          catLabel: 'Accueil',
-          price: 12900,
-          img: 'img/couronne.webp',
-          rating: 4.7,
-          reviews: 120,
-          stock: 10,
-          short: 'Palmes séchées tressées en cercle, grand nœud en tissu wax et graines d\'acacia dorées. Elle accueille chaleureusement vos invités dès l\'entrée.',
-          details: [
-            'Diamètre 40 cm adapté à toute porte standard ou mur de salon',
-            'Palmes traitées contre l\'humidité pour un usage intérieur/extérieur abrité',
-            'Ruban d\'accroche résistant en wax doublé'
-          ],
-          cross: ['creche', 'guirlande', 'boules-wax']
-        },
-        {
-          id: 'chemin-table',
-          name: 'Chemin de table Wax & Lin d\'or',
-          cat: 'deco',
-          catLabel: 'Art de la table',
-          price: 8900,
-          img: '/src/assets/images/table_noel_tropical_1790705299830.jpg',
-          rating: 4.8,
-          reviews: 64,
-          stock: 15,
-          short: 'Chemin de table de fête 180 × 40 cm alliant lin naturel sable et bordures en wax impérial. Pour une table de Réveillon tropicale et élégante.',
-          details: [
-            'Dimensions : 180 × 40 cm',
-            'Tissu lin écru lavé et bordures wax 100 % coton',
-            'Lavable en machine à 30 °C',
-            'Finition ourlet soigné'
-          ],
-          cross: ['pack-sapin', 'guirlande', 'couronne']
-        }
-      ],
-      adventGifts: [
-        { day: 1, title: 'Code PALMIER10 : -10 % sur toute la boutique', code: 'PALMIER10', desc: 'Profitez de 10 % de réduction immédiate sur tous nos sapins et décorations.' },
-        { day: 2, title: 'Guirlande cauris LED à 5 900 F au lieu de 7 900 F', code: 'CAURIS2000', desc: 'Offre flash de 2 000 FCFA de remise sur notre guirlande lumineuse.' },
-        { day: 3, title: 'Frais de livraison offerts sans minimum', code: 'LIVRAISONGRATUITE', desc: 'La livraison à domicile offerte partout à Cotonou et Calavi dès aujourd\'hui.' },
-        { day: 4, title: 'Cahier de coloriages de Noël tropical à imprimer', link: '#', desc: '6 planches de dessins festifs aux motifs africains pour occuper les enfants.' },
-        { day: 5, title: '-15 % sur la Crèche sculptée d\'Abomey', code: 'CRECHE15', desc: 'Une remise exceptionnelle sur notre chef-d\'œuvre en bois de teck noble.' },
-        { day: 6, title: 'Lot de boules en wax : 13 boules pour le prix de 12', code: 'WAXPLUS1', desc: 'Une boule supplémentaire exclusive offerte dans votre colis.' },
-        { day: 7, title: 'Recette secrète du Gâteau de Noël au gingembre et miel', link: '#', desc: 'La délicieuse recette familiale d\'Abomey à savourer le soir du 24.' },
-        { day: 8, title: 'Code AVENT15 : -15 % dès 30 000 F d\'achats', code: 'AVENT15', desc: 'Idéal pour équiper tout votre salon à prix tout doux.' },
-        { day: 9, title: 'Étoile de cime en calebasse offerte avec tout sapin', code: 'ETOILECADEAU', desc: 'Ajoutez l\'étoile et le sapin au panier, l\'étoile devient gratuite !' },
-        { day: 10, title: '3 modèles de cartes de vœux prêtes à imprimer', link: '#', desc: 'De magnifiques cartes de vœux illustrées pour souhaiter de joyeuses fêtes.' },
-        { day: 11, title: '-10 % supplémentaire sur les Couronnes de porte', code: 'PORTE10', desc: 'Embellissez votre entrée dès le pas de votre porte.' },
-        { day: 12, title: 'Tutoriel vidéo : L\'art d\'emballer ses cadeaux en pagne', link: '#', desc: 'Apprenez la technique zéro déchet du Furoshiki réinventée en wax.' },
-        { day: 13, title: 'Double surprise artisanale glissée dans votre colis', desc: 'Nos artisans ajoutent une création miniature exclusive à chaque commande.' },
-        { day: 14, title: 'Playlist Spotify & YouTube « Noël sous les Tropiques »', link: '#', desc: '2 heures de rythmes afro, jazz et classiques de Noël réarrangés.' },
-        { day: 15, title: 'Pack Sapin complet à 44 900 F au lieu de 49 900 F', code: 'PACKPROMO', desc: 'Le meilleur moment pour s\'équiper clé en main.' },
-        { day: 16, title: '-20 % sur votre deuxième décoration ajoutée', code: 'DUO20', desc: 'Assortissez guirlande, couronne ou boules à prix réduit.' },
-        { day: 17, title: 'Pack de 4 fonds d\'écran festifs pour mobile & ordi', link: '#', desc: 'De superbes photographies de notre collection en haute résolution.' },
-        { day: 18, title: 'Surclassement livraison Express 24h offert à Cotonou', code: 'EXPRESS24', desc: 'Recevez votre colis en priorité absolue.' },
-        { day: 19, title: 'Guide pratique : Dresser une table de Noël tropicale inoubliable', link: '#', desc: 'Conseils de stylisme et accords de couleurs pour épater vos convives.' },
-        { day: 20, title: 'Dernier jour pour la livraison garantie avant Noël !', desc: 'Passez commande avant 23h59 pour être livré à coup sûr sous le sapin.' },
-        { day: 21, title: 'Code PALMIER10 prolongé pour les retardataires', code: 'PALMIER10', desc: 'Dernière chance pour faire plaisir avec -10 %.' },
-        { day: 22, title: 'Chant de Noël traditionnel en langue Fon à écouter', link: '#', desc: 'Un moment d\'émotion pure interprété par la chorale de Porto-Novo.' },
-        { day: 23, title: 'Emballage cadeau en toile de jute offert', code: 'JUTEGRATUIT', desc: 'Votre commande livrée prête à déposer au pied du sapin.' },
-        { day: 24, title: 'Joyeux Réveillon de Noël : Merci de faire vivre l\'artisanat local !', desc: 'Toute l\'équipe de Noël sous les Palmiers vous souhaite une merveilleuse fête.' }
-      ],
-      reviews: [
-        {
-          author: 'Mireille Tossou',
-          city: 'Cotonou (Fidjrossè)',
-          rating: 5,
-          date: '14 déc. 2025',
-          text: 'Le sapin en raphia a fait une sensation incroyable auprès de toute la famille ! Il est léger, sent bon la fibre naturelle et se replie en quelques secondes. Je le ressors cette année avec le même émerveillement.'
-        },
-        {
-          author: 'Sèna & Kévin Lawson',
-          city: 'Abomey-Calavi (Arconville)',
-          rating: 5,
-          date: '18 déc. 2025',
-          text: 'Les enfants ouvraient le calendrier de l\'Avent chaque matin avant d\'aller à l\'école. Les boules en wax sont incassables et les cauris illuminés apportent une ambiance douce sans pareille.'
-        },
-        {
-          author: 'Thierry Houngbédji',
-          city: 'Porto-Novo (Avakpa)',
-          rating: 5,
-          date: '21 déc. 2025',
-          text: 'La crèche sculptée en teck d\'Abomey est un véritable trésor. Livrée en 24h à Porto-Novo, emballée avec un soin exceptionnel. On sent l\'amour du travail bien fait.'
-        },
-        {
-          author: 'Aïcha Diallo',
-          city: 'Abidjan (Cocody)',
-          rating: 5,
-          date: '19 déc. 2025',
-          text: 'Commande reçue par transporteur en 48h à Abidjan. Le pack complet est d\'une qualité supérieure à ce qu\'on trouve en grand magasin. Bravo aux artisans béninois !'
-        }
-      ],
-      faqs: [
-        {
-          q: 'Jusqu\'à quelle date puis-je commander pour être livré avant Noël ?',
-          a: 'Pour être livré à coup sûr avant le 24 décembre, passez votre commande avant le <b>20 décembre à 23h59</b> pour l\'ensemble du Bénin et les pays voisins (Togo, Côte d\'Ivoire). À Cotonou et Calavi, un service express reste actif jusqu\'au 23 décembre à 12h.'
-        },
-        {
-          q: 'Le sapin en raphia est-il solide et réutilisable ?',
-          a: 'Absolument ! La structure interne est en bambou souple et le raphia tressé serré est traité naturellement. Après les fêtes, le sapin se replie totalement à plat et se range dans son pochon protecteur pour ressortir intact année après année.'
-        },
-        {
-          q: 'Comment fonctionne le calendrier de l\'Avent en ligne ?',
-          a: 'Chaque jour du 1er au 24 décembre, une case devient interactive et dévoile une surprise : code promo, cadeau offert, tutoriel ou recette de fête. Les cases des jours futurs restent verrouillées pour préserver la magie. Vous pouvez tester n\'importe quel jour grâce au sélecteur de démonstration en haut de page.'
-        },
-        {
-          q: 'Quels sont les modes de paiement acceptés ?',
-          a: 'Sur notre vraie boutique, les paiements s\'effectuent par Mobile Money (MTN MoMo, Moov Money, Wave, Orange Money) ou directement à la livraison en espèces. <i>(Note : sur ce site de démonstration, aucun paiement réel n\'est débité ; la commande peut être envoyée par simulation sur WhatsApp.)</i>'
-        },
-        {
-          q: 'Et si un article ne me convient pas à la réception ?',
-          a: 'Vous disposez d\'une période de retour prolongée jusqu\'au <b>10 janvier 2027</b>. Vous pouvez également vérifier le colis directement en présence du livreur avant validation.'
-        },
-        {
-          q: 'Les guirlandes fonctionnent-elles en cas de coupure d\'électricité ?',
-          a: 'Oui ! Nos guirlandes lumineuses cauris sont hybrides : elles fonctionnent avec 3 piles standards (autonomie de plus de 40 heures) ou se branchent sur un câble USB relié à une prise ou à une simple batterie externe (powerbank).'
-        }
-      ]
-    };
+  <!-- =========================================================================
+       MODALES & TIROIRS OFF-CANVAS ACCESSIBLES (A11Y)
+       ========================================================================= -->
 
-    (() => {
-      const S = window.SITE;
-      const $ = (s, r = document) => r.querySelector(s);
-      const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  <!-- Modal Détail Produit (PDP) -->
+  <div class="modal-backdrop" id="pdp-modal" role="dialog" aria-modal="true" aria-labelledby="pdp-modal-title" style="display:none;">
+    <div class="modal-content modal-pdp-box">
+      <button class="modal-close-btn" id="close-pdp-btn" onclick="window.NSP.closePDP()" aria-label="Fermer la fiche produit">&times;</button>
+      <div id="pdp-content-container">
+        <!-- Rendu dynamique par app.js -->
+      </div>
+    </div>
+  </div>
 
-      const fcfa = n => new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'XOF', maximumFractionDigits: 0 }).format(Math.round(n));
-      const pct = (was, now) => Math.round((1 - now / was) * 100);
-      const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  <!-- Modal Calendrier de l'Avent (Surprise quotidienne) -->
+  <div class="modal-backdrop" id="advent-modal" role="dialog" aria-modal="true" aria-labelledby="advent-modal-title" style="display:none;">
+    <div class="modal-content modal-advent-box">
+      <button class="modal-close-btn" id="close-advent-btn" onclick="window.NSP.closeAdventModal()" aria-label="Fermer la surprise">&times;</button>
+      <div class="advent-modal-header">
+        <span class="advent-modal-day-badge" id="advent-modal-day-badge">Jour 1</span>
+        <h3 id="advent-modal-title" class="advent-modal-title">Surprise de Noël</h3>
+      </div>
+      <div id="advent-modal-body" class="advent-modal-body"></div>
+    </div>
+  </div>
 
-      const P = Object.fromEntries(S.products.map(p => [p.id, p]));
-      const qs = new URLSearchParams(location.search);
-      let DEMO_MODE = qs.get('demo') || 'live';
+  <!-- Panier Off-Canvas Drawer -->
+  <div class="modal-backdrop" id="cart-backdrop" style="display:none;"></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-heading" aria-hidden="true">
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <h3 id="cart-drawer-heading">Votre Panier de Fête</h3>
+        <span class="cart-header-count" id="cart-drawer-count">(0 article)</span>
+      </div>
+      <button class="cart-close-btn" id="close-cart-btn" onclick="window.NSP.closeCart()" aria-label="Fermer le panier">&times;</button>
+    </div>
 
-      const NOW = () => {
-        if (DEMO_MODE && S.demoTime && S.demoTime[DEMO_MODE]) {
-          return Date.parse(S.demoTime[DEMO_MODE]);
-        }
-        return Date.now();
-      };
+    <!-- Free Delivery Progress Bar -->
+    <div class="cart-shipping-progress" id="cart-shipping-progress">
+      <div class="shipping-bar-text" id="cart-shipping-msg">
+        Plus que 25 000 FCFA pour la livraison offerte !
+      </div>
+      <div class="shipping-bar-bg">
+        <div class="shipping-bar-fill" id="cart-shipping-bar" style="width: 0%;"></div>
+      </div>
+    </div>
 
-      const IC = {
-        truck: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>',
-        shield: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>',
-        back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>',
-        wa: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1-.7-.3-1.4-.7-2-1.3-.5-.5-1-1.1-1.3-1.7-.1-.2 0-.4.1-.5l.4-.5.3-.4v-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.7.7-1 1.6-1 2.5.1 1.1.5 2.1 1.2 3 1.2 1.8 2.8 3.2 4.7 4 .5.2 1 .4 1.6.5.6.2 1.2.2 1.8.1.7-.1 1.4-.6 1.8-1.2.2-.4.2-.9.1-1.3l-.5-.2z"/></svg>'
-      };
+    <!-- Items List Container -->
+    <div class="cart-items-list" id="cart-items-container" role="region" aria-label="Articles du panier">
+      <!-- Items injectés dynamiquement -->
+    </div>
 
-      function stars(r, n) {
-        const f = Math.round(r);
-        return `<div class="stars" aria-label="Note ${String(r).replace('.', ',')} sur 5"><span>${'★'.repeat(f)}${'☆'.repeat(5 - f)}</span>${n ? `<span>(${n})</span>` : ''}</div>`;
-      }
+    <!-- Notice Panier Vide -->
+    <div class="cart-empty" id="cart-empty-notice">
+      <div class="cart-empty-icon" aria-hidden="true">
+        <svg class="cart-empty-svg"><use href="#icon-gift"/></svg>
+      </div>
+      <p class="cart-empty-title">Votre panier est encore vide</p>
+      <p class="cart-empty-sub">Ajoutez un sapin en raphia fait main ou un coffret de boules en wax pour faire entrer la féerie chez vous !</p>
+      <button class="btn btn-primary btn-sm" onclick="window.NSP.closeCart(); location.href='#boutique';">
+        Explorer la boutique
+      </button>
+    </div>
 
-      function renderCard(p) {
-        const d = p.was ? pct(p.was, p.price) : 0;
-        const badge = p.badge || (d ? `-${d} %` : '');
-        const img = p.combo ? P[p.combo[0]].img : p.img;
-        return `
-          <article class="card" data-id="${p.id}">
-            <div class="card-media">
-              ${badge ? `<span class="card-badge ${d ? 'alt' : ''}">${esc(badge)}</span>` : ''}
-              <img src="${img}" alt="${esc(p.name)}" loading="lazy" width="400" height="400">
-            </div>
-            <div class="card-body">
-              <span class="card-meta">${esc(p.catLabel || p.cat)}</span>
-              <h3><a href="#/produit/${p.id}">${esc(p.name)}</a></h3>
-              ${p.rating ? stars(p.rating, p.reviews) : ''}
-              <div class="price"><strong>${fcfa(p.price)}</strong>${p.was ? `<s>${fcfa(p.was)}</s>` : ''}</div>
-              ${p.stock && p.stock <= S.lowStock ? `<span class="stock-tag">Plus que ${p.stock} en stock</span>` : ''}
-              <div class="card-add-btn"><button class="btn btn-acc btn-sm btn-block" data-add="${p.id}">${esc(S.ctaCard)}</button></div>
-            </div>
-          </article>
-        `;
-      }
+    <!-- Cart Footer with Promo and Checkout -->
+    <div class="cart-footer" id="cart-footer" style="display: none;">
+      <!-- Promo code input with instant validation -->
+      <form class="cart-promo-row" onsubmit="event.preventDefault(); window.NSP.applyPromoCode();">
+        <input 
+          type="text" 
+          id="cart-promo-input" 
+          placeholder="Code promo (ex: PALMIER10)" 
+          aria-label="Code promotionnel de Noël"
+          autocomplete="off"
+        >
+        <button type="submit" class="btn btn-outline btn-sm" id="btn-apply-promo">Appliquer</button>
+      </form>
+      <div id="cart-promo-feedback" class="cart-promo-feedback" aria-live="polite"></div>
 
-      function renderGrid(el, list) {
-        if (!el) return;
-        el.innerHTML = list.map(renderCard).join('') || `<div style="grid-column: 1/-1; text-align:center; padding: 3rem 1rem;"><p class="muted">Aucun article ne correspond.</p><button class="btn btn-ghost btn-sm" data-reset-filter>Voir tout</button></div>`;
-      }
+      <div id="cart-gift-badge" class="cart-gift-badge" style="display:none;"></div>
 
-      let shopCat = 'all', shopSort = 'pop', shopSearch = '';
-      function renderShop() {
-        const v = $('[data-view="shop"]');
-        if (!v) return;
-        const chips = $('#chips', v);
-        if (chips) {
-          chips.innerHTML = S.cats.map(([k, l]) => `<button class="chip" aria-pressed="${k === shopCat}" data-cat="${k}">${esc(l)}</button>`).join('');
-        }
-        let list = S.products.filter(p => {
-          const matchCat = shopCat === 'all' || p.cat === shopCat || (p.combo && shopCat === 'packs');
-          const matchSearch = !shopSearch || p.name.toLowerCase().includes(shopSearch.toLowerCase()) || p.short.toLowerCase().includes(shopSearch.toLowerCase());
-          return matchCat && matchSearch;
-        });
-        const sorts = {
-          pop: (a, b) => (b.reviews || 0) - (a.reviews || 0),
-          asc: (a, b) => a.price - b.price,
-          desc: (a, b) => b.price - a.price,
-          disc: (a, b) => (b.was ? pct(b.was, b.price) : 0) - (a.was ? pct(a.was, a.price) : 0)
-        };
-        if (sorts[shopSort]) list.sort(sorts[shopSort]);
-        const countEl = $('#shop-count', v);
-        if (countEl) countEl.textContent = `${list.length} création${list.length > 1 ? 's' : ''}`;
-        renderGrid($('#shop-grid', v), list);
-      }
+      <div class="cart-totals">
+        <div class="cart-totals-row">
+          <span>Sous-total articles</span>
+          <span id="cart-subtotal">0 FCFA</span>
+        </div>
 
-      let curProd = null, curQty = 1, curOptIndex = 0;
-      function renderProduct(id) {
-        const p = P[id];
-        const v = $('[data-view="product"]');
-        if (!v) return;
-        if (!p) {
-          v.innerHTML = `<div class="wrap" style="text-align:center; padding: 5rem 1rem;"><h1>Création introuvable</h1><a class="btn btn-acc" href="#/boutique">Boutique</a></div>`;
-          return;
-        }
-        curProd = p; curQty = 1; curOptIndex = p.options ? (p.options.def || 0) : 0;
-        const currentPrice = (p.options && p.options.prices) ? p.options.prices[curOptIndex] : p.price;
-        const d = p.was ? pct(p.was, currentPrice) : 0;
-        document.title = `${p.name} – ${S.brand}`;
-        const crossItems = (p.cross || []).map(cid => P[cid]).filter(Boolean);
+        <div class="cart-totals-row" id="cart-discount-row" style="display: none; color: var(--accent);">
+          <span id="cart-discount-label">Remise code promo</span>
+          <span id="cart-discount">-0 FCFA</span>
+        </div>
 
-        v.innerHTML = `
-          <div class="wrap">
-            <nav class="crumbs" aria-label="Fil d'Ariane"><a href="#/">Accueil</a> / <a href="#/boutique">Boutique</a> / <span aria-current="page">${esc(p.name)}</span></nav>
-            <div class="pdp">
-              <div class="pdp-media ${p.combo ? 'combo-grid' : ''}">
-                ${p.combo ? p.combo.map(cid => `<img src="${P[cid].img}" alt="" width="400" height="400">`).join('') : `<img src="${p.img}" alt="" width="800" height="800">`}
-              </div>
-              <div class="pdp-info">
-                <span class="eyebrow">${esc(p.catLabel || p.cat)} · Artisanat béninois</span>
-                <h1>${esc(p.name)}</h1>
-                ${p.rating ? `<div style="display:flex; align-items:center; gap:0.6rem;">${stars(p.rating, p.reviews)}<span class="muted" style="font-size:0.88rem;">${p.reviews} avis vérifiés</span></div>` : ''}
-                <div class="price"><strong id="pdp-price">${fcfa(currentPrice)}</strong>${p.was ? `<s>${fcfa(p.was)}</s> <span class="save-badge">-${d} %</span>` : ''}</div>
-                <p style="font-size:1.05rem;">${p.short}</p>
-                ${p.options ? `<div><span class="opt-label">${esc(p.options.label)} :</span><div class="chips" id="pdp-options">${p.options.values.map((val, idx) => `<button class="chip" aria-pressed="${idx === curOptIndex}" data-opt-idx="${idx}">${esc(val)}</button>`).join('')}</div></div>` : ''}
-                <div class="buy-row">
-                  <div class="qty-control" role="group" aria-label="Quantité"><button data-q="-1">−</button><output id="pdp-qty">1</output><button data-q="1">+</button></div>
-                  <button class="btn btn-acc" id="pdp-add-btn">${esc(S.ctaPdp)} · <span id="pdp-btn-total">${fcfa(currentPrice)}</span></button>
-                </div>
-                <a class="btn btn-wa btn-block" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent(`Bonjour, je souhaite commander : ${p.name} (${fcfa(currentPrice)}).`)}">${IC.wa.replace('<svg', '<svg width="22" height="22"')} Commander sur WhatsApp</a>
-                <ul class="info-list">
-                  <li>${IC.truck}<span>${S.delivery}</span></li>
-                  <li>${IC.shield}<span>Paiement sécurisé Mobile Money ou à la livraison.</span></li>
-                  <li>${IC.back}<span>${S.returns}</span></li>
-                </ul>
-              </div>
-            </div>
-            ${crossItems.length ? `<section class="sec" style="border-top:1px solid var(--line); margin-top:2rem;"><div class="sec-h"><h2>${esc(S.crossTitle)}</h2></div><div class="grid" id="cross-grid"></div></section>` : ''}
-          </div>
-        `;
-        if (crossItems.length) renderGrid($('#cross-grid', v), crossItems);
-      }
+        <div class="cart-totals-row">
+          <span>Livraison express à domicile</span>
+          <span id="cart-shipping" class="cart-shipping-val">1 500 FCFA</span>
+        </div>
 
-      function updatePdpTotal() {
-        if (!curProd) return;
-        const price = (curProd.options && curProd.options.prices) ? curProd.options.prices[curOptIndex] : curProd.price;
-        const total = price * curQty;
-        if ($('#pdp-btn-total')) $('#pdp-btn-total').textContent = fcfa(total);
-        if ($('#pdp-qty')) $('#pdp-qty').textContent = curQty;
-        if ($('#pdp-price')) $('#pdp-price').textContent = fcfa(price);
-      }
+        <div class="cart-totals-row cart-total-grand">
+          <span>Total de la commande</span>
+          <span id="cart-total">0 FCFA</span>
+        </div>
+      </div>
 
-      const CART_KEY = 'q4_cart_' + S.key;
-      let cart = [];
-      try { cart = JSON.parse(localStorage.getItem(CART_KEY)) || []; } catch (e) { cart = []; }
-      let activePromo = null;
-      function saveCart() { try { localStorage.setItem(CART_KEY, JSON.stringify(cart)); } catch (e) {} }
+      <a href="#" id="btn-checkout-whatsapp" target="_blank" rel="noopener" class="btn btn-whatsapp btn-block pulse-hover">
+        <svg class="svg-ico" aria-hidden="true"><use href="#icon-send"/></svg>
+        <span>Valider ma commande sur WhatsApp</span>
+      </a>
+      
+      <p class="cart-security-note">
+        <svg class="svg-ico svg-ico-xs" aria-hidden="true"><use href="#icon-shield"/></svg>
+        Paiement sécurisé MTN MoMo, Moov Money, Wave ou à la livraison à réception du colis.
+      </p>
+    </div>
+  </aside>
 
-      function addToCart(id, qty = 1, optLabel = null, optPrice = null) {
-        const p = P[id]; if (!p) return;
-        const existing = cart.find(x => x.id === id && x.opt === optLabel);
-        if (existing) existing.qty += qty; else cart.push({ id, qty, opt: optLabel, price: optPrice !== null ? optPrice : p.price });
-        saveCart(); renderCart();
-        $$('.cart-count').forEach(b => { b.classList.remove('bump'); void b.offsetWidth; b.classList.add('bump'); });
-        toast(`« ${p.name} » ajouté au panier`);
-        setTimeout(openCart, 300);
-      }
+  <!-- Mobile Floating Cart Quick Button -->
+  <div class="mobile-sticky-bar" id="mobile-sticky-bar">
+    <button class="mobile-sticky-cart-btn" onclick="window.NSP.openCart()" aria-label="Voir le panier">
+      <div class="sticky-cart-left">
+        <svg class="svg-ico"><use href="#icon-cart"/></svg>
+        <span class="sticky-cart-count" id="sticky-cart-count">0 article</span>
+      </div>
+      <div class="sticky-cart-right">
+        <span class="sticky-cart-total" id="sticky-cart-total">0 FCFA</span>
+        <svg class="svg-ico svg-ico-xs"><use href="#icon-arrow-right"/></svg>
+      </div>
+    </button>
+  </div>
 
-      function getSubtotal() { return cart.reduce((acc, item) => acc + ((item.price || P[item.id]?.price || 0) * item.qty), 0); }
+  <!-- Toast Notification Container (A11y polite live region) -->
+  <div class="toast-container" id="toast-container" aria-live="polite" aria-atomic="true"></div>
 
-      function renderCart() {
-        const count = cart.reduce((s, l) => s + l.qty, 0);
-        $$('.cart-count').forEach(c => c.textContent = count);
-        const body = $('.drawer-b'), foot = $('.drawer-f');
-        if (!body || !foot) return;
-        if (!cart.length) {
-          body.innerHTML = `<div style="text-align:center; padding: 4rem 1rem; color: var(--muted);"><p style="font-size:1.15rem; font-weight:800; color:var(--fg-heading); margin-bottom:0.4rem;">Votre panier est vide</p><a class="btn btn-acc" href="#/boutique" data-close>Découvrir nos créations</a></div>`;
-          foot.hidden = true; return;
-        }
-        foot.hidden = false;
-        const sub = getSubtotal(), missing = Math.max(0, S.freeShip - sub), shipFee = missing > 0 ? S.shipFee : 0;
-        const discount = activePromo ? Math.round(sub * (activePromo.pct / 100)) : 0, grandTotal = sub - discount + shipFee;
-        const progressPct = Math.min(100, Math.round((sub / S.freeShip) * 100));
-
-        body.innerHTML = `
-          <div class="ship-progress"><div style="display:flex; justify-content:space-between;"><span>${missing > 0 ? `Plus que <b>${fcfa(missing)}</b> pour la livraison offerte !` : `🎉 <b>Livraison gratuite débloquée !</b>`}</span><span>${progressPct}%</span></div><div class="progress-bar"><i style="width:${progressPct}%;"></i></div></div>
-          <div>${cart.map((item, idx) => {
-            const p = P[item.id] || { name: 'Article', img: '' };
-            return `<div class="cart-line"><img src="${p.img}" alt=""><div><h4>${esc(p.name)}</h4>${item.opt ? `<div style="font-size:0.8rem; color:var(--muted);">${esc(item.opt)}</div>` : ''}<div class="qty-control" style="margin-top:0.4rem; height:32px;"><button data-cart-q="${idx}" data-d="-1" style="width:28px; height:32px;">−</button><output style="width:28px; height:32px;">${item.qty}</output><button data-cart-q="${idx}" data-d="1" style="width:28px; height:32px;">+</button></div></div><div style="text-align:right;"><b class="tnum">${fcfa((item.price || p.price) * item.qty)}</b><br><button class="rm-btn" data-cart-rm="${idx}">Retirer</button></div></div>`;
-          }).join('')}</div>
-        `;
-        foot.innerHTML = `
-          <div class="code-row"><input id="promo-input" placeholder="Code promo" value="${activePromo ? activePromo.code : ''}"><button class="btn btn-ghost btn-sm" id="promo-apply-btn">Appliquer</button></div>
-          <div class="tot-row"><span class="muted">Sous-total</span><span class="tnum">${fcfa(sub)}</span></div>
-          ${activePromo ? `<div class="tot-row" style="color:var(--acc-text);"><span>Code ${activePromo.code} (-${activePromo.pct} %)</span><span class="tnum">−${fcfa(discount)}</span></div>` : ''}
-          <div class="tot-row"><span class="muted">Livraison</span><span class="tnum">${shipFee ? fcfa(shipFee) : '<b style="color:var(--success);">Offerte</b>'}</span></div>
-          <div class="tot-row grand"><span>Total TTC</span><span class="tnum">${fcfa(grandTotal)}</span></div>
-          <button class="btn btn-acc btn-block" id="checkout-btn">${esc(S.ctaCheckout)}</button>
-          <div class="payment-badges"><span>MTN MoMo</span><span>Moov Money</span><span>Wave</span><span>Livraison</span></div>
-        `;
-      }
-
-      function openCart() { $('.drawer')?.classList.add('open'); $('.overlay')?.classList.add('open'); }
-      function closeCart() { $('.drawer')?.classList.remove('open'); $('.overlay')?.classList.remove('open'); }
-
-      let toastTimer;
-      function toast(msg) {
-        const el = $('.toast'); if (!el) return;
-        el.textContent = msg; el.classList.add('show');
-        clearTimeout(toastTimer); toastTimer = setTimeout(() => el.classList.remove('show'), 2800);
-      }
-
-      function openModal(contentHtml) {
-        const m = document.createElement('div'); m.className = 'modal'; m.innerHTML = `<div class="modal-bg"></div><div class="modal-card"><button class="x-btn" style="position:absolute; top:0.8rem; right:0.8rem;">×</button>${contentHtml}</div>`;
-        document.body.appendChild(m);
-        const closeMe = () => m.remove();
-        m.querySelector('.modal-bg').addEventListener('click', closeMe);
-        m.querySelector('.x-btn').addEventListener('click', closeMe);
-      }
-
-      function initAdventCalendar() {
-        const calEl = $('#cal'); if (!calEl) return;
-        const n = new Date(NOW()), inDec = n.getMonth() === 11 && n.getFullYear() === 2026;
-        let today = inDec ? n.getDate() : (DEMO_MODE === 'after' ? 24 : 15);
-        if (DEMO_MODE === 'before') today = 0;
-        const order = [7, 19, 3, 14, 22, 1, 11, 17, 5, 24, 9, 15, 2, 20, 12, 6, 23, 10, 16, 4, 18, 13, 21, 8];
-        calEl.innerHTML = order.map(d => `<button class="day ${d < today ? 'open' : ''} ${d === today ? 'today' : ''} ${d > today ? 'lock' : ''}" data-day="${d}"><span>${d}</span></button>`).join('');
-        if ($('#cal-note')) $('#cal-note').innerHTML = today > 0 ? `Aujourd'hui : ${Math.min(today, 24)} case(s) ouverte(s).` : `S'ouvre le 1er décembre.`;
-        calEl.addEventListener('click', e => {
-          const btn = e.target.closest('[data-day]'); if (!btn) return;
-          const d = +btn.dataset.day;
-          if (d > today) { btn.classList.remove('shake'); void btn.offsetWidth; btn.classList.add('shake'); toast(`La case ${d} s'ouvre le ${d} décembre.`); return; }
-          btn.classList.add('open');
-          const gift = S.adventGifts[d - 1] || { title: 'Surprise', desc: 'Joyeuses fêtes !' };
-          openModal(`<div style="text-align:center;"><h2 style="font-size:1.5rem;">Surprise du ${d} décembre</h2><p style="font-weight:700;">${esc(gift.title)}</p><p class="muted">${esc(gift.desc)}</p>${gift.code ? `<button class="btn btn-acc btn-block" data-copy-code="${gift.code}">Copier code : <b>${gift.code}</b></button>` : `<a class="btn btn-acc btn-block" href="#/boutique" data-close>Boutique</a>`}</div>`);
-        });
-      }
-
-      function initQuiz() {
-        const qBox = $('#quiz-box'); if (!qBox) return;
-        qBox.addEventListener('click', e => {
-          const btn = e.target.closest('[data-quiz-choice]'); if (!btn) return;
-          const choice = btn.dataset.quizChoice, resEl = $('#quiz-result'); if (!resEl) return;
-          let rec = { title: 'Pack Sapin Complet', id: 'pack-sapin', price: '49 900 FCFA' };
-          if (choice === 'cadeau') rec = { title: 'Crèche sculptée d\'Abomey', id: 'creche', price: '24 900 FCFA' };
-          else if (choice === 'moderne') rec = { title: 'Sapin en Raphia 1,5 m', id: 'sapin-raphia', price: '34 900 FCFA' };
-          resEl.innerHTML = `<h3>Recommandé pour vous :</h3><p style="font-weight:800; color:var(--sec-dark);">${rec.title} (${rec.price})</p><div style="display:flex; gap:0.6rem; justify-content:center;"><a class="btn btn-acc" href="#/produit/${rec.id}">Voir la fiche</a><button class="btn btn-ghost" data-add="${rec.id}">Ajouter au panier</button></div>`;
-          resEl.classList.add('active');
-        });
-      }
-
-      function initSantaLetter() {
-        const form = $('#letter-form'); if (!form) return;
-        const wishesContainer = $('#wishes-container');
-        if (wishesContainer) {
-          wishesContainer.innerHTML = S.products.filter(p => !p.combo).map(p => `<label class="wish"><input type="checkbox" value="${p.id}" ${p.id === 'sapin-raphia' ? 'checked' : ''}><img src="${p.img}" alt=""><span>${esc(p.name)}<b>${fcfa(p.price)}</b></span></label>`).join('');
-        }
-        const updateLetter = () => {
-          const checkedIds = [...form.querySelectorAll('input:checked')].map(i => i.value);
-          const total = checkedIds.reduce((sum, id) => sum + (P[id] ? P[id].price : 0), 0);
-          if ($('#letter-total')) $('#letter-total').textContent = fcfa(total);
-          const itemsList = checkedIds.map(id => `• ${P[id].name} (${fcfa(P[id].price)})`).join('\n');
-          const waText = `🎄 Ma liste de souhaits :\n\n${itemsList}\n\nTotal : ${fcfa(total)}`;
-          if ($('#letter-wa-btn')) $('#letter-wa-btn').href = `https://wa.me/?text=${encodeURIComponent(waText)}`;
-          return checkedIds;
-        };
-        form.addEventListener('input', updateLetter); form.addEventListener('change', updateLetter);
-        $('#letter-add-all-btn')?.addEventListener('click', () => updateLetter().forEach(id => addToCart(id, 1)));
-        updateLetter();
-      }
-
-      function updateCountdown() {
-        const now = NOW(), cutoff = Date.parse(S.event.deliveryCutoff), end = Date.parse(S.event.end);
-        let state = 'live', target = cutoff;
-        if (now < Date.parse(S.event.start)) { state = 'before'; target = Date.parse(S.event.start); }
-        else if (now > cutoff && now <= end) { state = 'express'; target = end; }
-        else if (now > end) { state = 'after'; }
-        const ms = Math.max(0, target - now), s = Math.floor(ms / 1000), d = Math.floor(s / 86400), h = Math.floor((s % 86400) / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
-        const pad = v => String(v).padStart(2, '0');
-        $$('[data-cd]').forEach(el => {
-          el.innerHTML = state === 'after' ? `<b>25<small>déc</small></b>` : `<b>${d}<small>j</small></b><b>${pad(h)}<small>h</small></b><b>${pad(m)}<small>min</small></b><b>${pad(sec)}<small>s</small></b>`;
-        });
-        $$('[data-cd-label]').forEach(el => { el.textContent = S.event.labels[state] || S.event.labels.live; });
-      }
-
-      function route() {
-        const hash = location.hash || '#/';
-        if (hash && !hash.startsWith('#/')) {
-          const targetEl = document.getElementById(hash.slice(1));
-          if (targetEl) { showView('home'); targetEl.scrollIntoView({ behavior: 'smooth' }); }
-          return;
-        }
-        const parts = (hash.slice(2) || '').split('/'), view = parts[0] || 'home', param = parts[1];
-        if (view === 'boutique') { showView('shop'); shopCat = param || 'all'; renderShop(); document.title = `Boutique – ${S.brand}`; }
-        else if (view === 'produit') { showView('product'); renderProduct(param); }
-        else { showView('home'); document.title = `${S.brand} – ${S.tagline}`; }
-        $$('.nav a').forEach(a => a.toggleAttribute('aria-current', a.getAttribute('href') === hash));
-        closeCart(); window.scrollTo(0, 0); revealOnScroll();
-      }
-
-      function showView(v) { $$('[data-view]').forEach(sec => sec.hidden = sec.dataset.view !== v); }
-
-      let io;
-      function revealOnScroll() {
-        if (!('IntersectionObserver' in window)) { $$('.rv').forEach(e => e.classList.add('in')); return; }
-        io = io || new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { rootMargin: '0px 0px -5% 0px' });
-        $$('.rv:not(.in)').forEach(el => io.observe(el));
-      }
-
-      document.addEventListener('click', e => {
-        const addCardBtn = e.target.closest('[data-add]');
-        if (addCardBtn) {
-          e.preventDefault(); const p = P[addCardBtn.dataset.add];
-          if (p) addToCart(p.id, 1, p.options ? p.options.values[p.options.def || 0] : null, p.options && p.options.prices ? p.options.prices[p.options.def || 0] : p.price);
-        }
-        if (e.target.closest('#pdp-add-btn') && curProd) {
-          addToCart(curProd.id, curQty, curProd.options ? curProd.options.values[curOptIndex] : null, curProd.options && curProd.options.prices ? curProd.options.prices[curOptIndex] : curProd.price);
-        }
-        const qBtn = e.target.closest('[data-q]');
-        if (qBtn) { curQty = Math.max(1, Math.min(99, curQty + (+qBtn.dataset.q))); updatePdpTotal(); }
-        const optBtn = e.target.closest('[data-opt-idx]');
-        if (optBtn) { curOptIndex = +optBtn.dataset.optIdx; $$('[data-opt-idx]').forEach(b => b.setAttribute('aria-pressed', b === optBtn)); updatePdpTotal(); }
-        const cartQBtn = e.target.closest('[data-cart-q]');
-        if (cartQBtn) { const idx = +cartQBtn.dataset.cartQ; cart[idx].qty += +cartQBtn.dataset.d; if (cart[idx].qty <= 0) cart.splice(idx, 1); saveCart(); renderCart(); }
-        const cartRmBtn = e.target.closest('[data-cart-rm]');
-        if (cartRmBtn) { cart.splice(+cartRmBtn.dataset.cartRm, 1); saveCart(); renderCart(); }
-        if (e.target.closest('[data-open-cart]')) openCart();
-        if (e.target.closest('[data-close]')) closeCart();
-        if (e.target.closest('#promo-apply-btn')) {
-          const val = ($('#promo-input')?.value || '').trim().toUpperCase();
-          if (S.codes[val]) { activePromo = { code: val, pct: S.codes[val] }; toast(`Code ${val} appliqué !`); } else { activePromo = null; toast('Code invalide.'); }
-          renderCart();
-        }
-        if (e.target.closest('#checkout-btn')) {
-          const sub = getSubtotal(), total = sub - (activePromo ? Math.round(sub * (activePromo.pct / 100)) : 0);
-          openModal(`<div style="text-align:center;"><h2>Valider la commande</h2><p class="muted">Total : ${fcfa(total)}</p><a class="btn btn-wa btn-block" target="_blank" rel="noopener" href="https://wa.me/?text=${encodeURIComponent('Bonjour, je souhaite valider ma commande de ' + fcfa(total))}">${IC.wa.replace('<svg', '<svg width="22" height="22"')} Envoyer sur WhatsApp</a></div>`);
-        }
-        const catChip = e.target.closest('[data-cat]');
-        if (catChip) { shopCat = catChip.dataset.cat; renderShop(); }
-        const copyBtn = e.target.closest('[data-copy-code]');
-        if (copyBtn) { navigator.clipboard?.writeText(copyBtn.dataset.copyCode).then(() => toast(`Code copié !`)); }
-      });
-
-      document.addEventListener('change', e => {
-        if (e.target.id === 'sort') { shopSort = e.target.value; renderShop(); }
-        if (e.target.id === 'demo-select') {
-          DEMO_MODE = e.target.value; initAdventCalendar(); updateCountdown(); toast(`Mode simulé mis à jour.`);
-        }
-      });
-
-      document.addEventListener('input', e => {
-        if (e.target.id === 'shop-search') { shopSearch = e.target.value; renderShop(); }
-      });
-
-      window.addEventListener('hashchange', route);
-
-      function init() {
-        initAdventCalendar(); initQuiz(); initSantaLetter(); renderCart(); updateCountdown(); setInterval(updateCountdown, 1000);
-        if ($('#featured-grid')) renderGrid($('#featured-grid'), [P['pack-sapin'], P['sapin-raphia'], P['boules-wax'], P['creche']].filter(Boolean));
-        if ($('#reviews-container')) $('#reviews-container').innerHTML = S.reviews.map(r => `<figure class="review-card">${stars(r.rating)}<p>« ${esc(r.text)} »</p><footer>${esc(r.author)}<small>${esc(r.city)}</small></footer></figure>`).join('');
-        if ($('#faq-container')) $('#faq-container').innerHTML = S.faqs.map(f => `<details class="faq-item"><summary>${esc(f.q)}</summary><p>${f.a}</p></details>`).join('');
-        route();
-      }
-
-      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
-    })();
-  </script>
+  <!-- Main JavaScript Applet -->
+  <script src="/app.js"></script>
 </body>
 </html>
