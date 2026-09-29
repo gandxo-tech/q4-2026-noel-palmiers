@@ -1,0 +1,8 @@
+{
+  "name": "Noël sous les Palmiers",
+  "description": "Déco de Noël artisanale en raphia et wax à Cotonou. Sapins en raphia, boules en wax, crèches en bois et calendrier de l'Avent.",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

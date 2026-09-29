@@ -1,0 +1,14 @@
+{
+  "name": "noel-sous-les-palmiers",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "echo 'Static site, no build step required'"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
